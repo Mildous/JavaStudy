@@ -1,0 +1,7 @@
+package Chap06;
+
+public class product {
+	int price;
+	int bonusPoint;
+
+}

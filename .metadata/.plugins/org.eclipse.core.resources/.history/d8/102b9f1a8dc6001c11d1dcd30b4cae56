@@ -1,0 +1,8 @@
+package Task0427_01;
+
+public class Snack {
+	String taste;
+	String shape;
+	int price;
+
+}

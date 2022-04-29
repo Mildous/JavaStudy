@@ -1,0 +1,15 @@
+package Chap01;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		Book b;
+		b = new Book();
+		b.title = "자바의 정석";
+		b.writer = "남궁성";
+		b.publisher = "도우출판";
+		b.year = 160127;
+
+	}
+
+}

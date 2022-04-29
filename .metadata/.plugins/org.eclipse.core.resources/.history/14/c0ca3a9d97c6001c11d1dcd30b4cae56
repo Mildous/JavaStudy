@@ -1,0 +1,26 @@
+package Task0427_01_02;
+
+import java.util.Scanner;
+
+public class SnackOrderSys1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("¸ð¾ç : ");
+		String shape = sc.nextLine();
+		System.out.print("¸À : ");
+		String taste = sc.nextLine();
+		System.out.print("Èñ¸Á°¡°Ý : ");
+		int price = Integer.parseInt(sc.nextLine());
+		System.out.print("ÁÖ¹®¼ö·® : ");
+		int qty = Integer.parseInt(sc.nextLine());
+		
+		Snack s = new Snack(shape, taste, price, qty);
+		
+		s.showSnackOrder();
+		
+		
+	}
+
+}

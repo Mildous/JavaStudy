@@ -1,0 +1,18 @@
+package Chap03;
+
+public class CardTest {
+
+	public static void main(String[] args) {
+		System.out.println(Card.width);
+		System.out.println(Card.hegiht);
+
+		Card c1 = new Card(); //인스턴스화
+		c1.kind = "heart";
+		c1.num = 7;
+		
+		System.out.println(c1.kind);
+		System.out.println(c1.num);
+		
+	}
+
+}

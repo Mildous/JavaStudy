@@ -1,0 +1,15 @@
+package Chap01;
+
+public class TimeTest {
+
+	public static void main(String[] args) {
+		Time t = new Time();
+		
+		//t.hour = 50;
+		//t.minute = 67;
+		//t.second = 66;
+				
+
+	}
+
+}

@@ -1,0 +1,6 @@
+package Chap06;
+
+public class Tv extends Product {
+	
+
+}

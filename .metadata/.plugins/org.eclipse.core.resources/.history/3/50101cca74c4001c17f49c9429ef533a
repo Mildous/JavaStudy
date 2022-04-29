@@ -1,0 +1,19 @@
+package Task01;
+//색상, 화면크기(12, 14, 16인치), 메모리용량(4, 8, 16, 32) , CPU(i3, i5, i7)
+public class Notebook {
+	String color;
+	int screenSize;
+	int storage;
+	int memory;
+	String cpu;
+
+	Notebook(){}
+	
+	Notebook(String c, int s, int storage, int memory, String cpu){
+		color = c;
+		
+		
+	}
+	
+	
+}

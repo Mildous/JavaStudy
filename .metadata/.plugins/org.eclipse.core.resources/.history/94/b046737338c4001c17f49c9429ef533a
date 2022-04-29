@@ -1,0 +1,10 @@
+package Chap01;
+
+public class Time {
+	private int hour;
+	private int minute;
+	private float second;
+	
+	
+
+}

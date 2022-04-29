@@ -1,0 +1,8 @@
+package Chap06;
+
+public class Piano extends Product {
+	Piano(){
+		super(300);
+	}
+
+}

@@ -1,0 +1,25 @@
+package Chap01;
+//제목, 저자, 출판사, 년도
+//책3권의 정보 출력
+public class Book {
+	String title;
+	String writer;
+	String publisher;
+	int year;
+	
+	public void title() {
+		
+	}
+	public void writer() {
+		
+	}
+	public void publisher() {
+		
+	}
+	public void year() {
+		
+	}
+
+	
+
+}

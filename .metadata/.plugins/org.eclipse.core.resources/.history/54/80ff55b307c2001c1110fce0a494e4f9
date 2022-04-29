@@ -1,0 +1,29 @@
+package Array;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		int[] num = new int[10];
+		
+		for(int i=0; i< num.length; i++) {
+			num = i;
+			System.out.println(num[i]);
+			
+		}
+		System.out.println();
+		for (int i=0; i<100; i++) {
+			int n = (int)(math.random()*10);
+			int tmp = num[0];
+			
+			num[0] = num[n];
+			int n = (int)(Math.random()*10);
+			int temp = Arr[0];
+			for
+			{arr[0]= jum{ 
+			}
+				
+		}
+
+	}
+
+}

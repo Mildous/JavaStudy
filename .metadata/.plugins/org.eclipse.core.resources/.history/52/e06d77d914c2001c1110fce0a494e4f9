@@ -1,0 +1,18 @@
+package Chap02;
+
+public class TvTest {
+
+	public static void main(String[] args) {
+		Tv t1 = new Tv();
+		System.out.println(t1.color);
+		
+		t1.power = true;
+		t1.channel = 10;
+		t1.color = "red";
+		
+		t1.channelUp();
+		System.out.println(t1.channel);
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package Chap03;
+
+public class CardTest {
+
+	public static void main(String[] args) {
+		System.out.println(Card.width);
+		System.out.println(Card.hegiht);
+		System.out.println(Card.num);
+		
+
+	}
+
+}

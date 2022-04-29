@@ -1,0 +1,22 @@
+package Task01;
+
+public class UmbrellaTest {
+
+	public static void main(String[] args) {
+		Umbrella u1 = new Umbrella();
+		u1.type = "Long";
+		u1.pattern = "Plain";
+		u1.color = "Black";
+				
+		Umbrella u2 = new Umbrella();
+		u2.type = "Short";
+		u2.pattern = "Dot";
+		u2.color = "red";
+		
+		Umbrella u3 = new Umbrella();
+		u2.type = "Long";
+		u2.pattern = "Dot";
+		u2.color = "Blue";
+	}
+
+}

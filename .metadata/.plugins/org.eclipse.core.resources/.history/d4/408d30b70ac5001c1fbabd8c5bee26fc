@@ -1,0 +1,15 @@
+package Task01;
+
+public class Person {
+	
+	String name;
+	String num;
+	String birth;
+
+	public void showPerson() {
+		System.out.printf("이름: %s, 전화번호: %s"+(birth != null && !"".equals(birth) ? ", 생일: %s" : ""), name, num, birth);
+	}
+
+}
+	
+	

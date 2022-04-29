@@ -1,0 +1,21 @@
+package Chap02;
+
+public class Tv {
+	//특징, 속성 ㅡ> 멤버 변수
+	String color;
+	boolean power;
+	int channel;
+	
+	//기능, 액션 ㅡ> 멤버 메소드
+	void power(){
+		power =!power;
+	} //toggle
+	void channelUp() {
+		channel++;
+		}
+	void channelDown() {}
+		channel--;
+	
+	
+	
+}

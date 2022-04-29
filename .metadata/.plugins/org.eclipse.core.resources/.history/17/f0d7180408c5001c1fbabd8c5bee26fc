@@ -1,0 +1,16 @@
+package Task01;
+
+public class Person {
+	
+	String name;
+	String num;
+	String birth;
+	
+	Person(String name, String num, String birth){
+	
+	
+	}
+
+}
+	
+	

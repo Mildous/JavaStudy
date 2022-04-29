@@ -1,0 +1,20 @@
+package Chap04;
+
+public class MyMathTest {
+
+	public static void main(String[] args) {
+		MyMath mm = new MyMath();
+		
+		int result = mm.add(200, 100);
+		int result2 = mm.subtract(200, 100);
+		int result3 = mm.multiply(200, 100);
+		double result4 = mm.devide(200, 100);
+		
+		System.out.println("add(200, 100) = "+ result);
+		System.out.println("subtract(200, 100) = "+ result2);
+		System.out.println("multiply(200, 100) = "+ result3);
+		System.out.println("devide(200, 100) = "+ result4);
+
+	}
+
+}
