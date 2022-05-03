@@ -1,0 +1,14 @@
+package Test;
+
+public class TimeTest {
+
+	public static void main(String[] args) {
+		int hour;
+		int minute;
+		int second;
+		
+		int 
+
+	}
+
+}

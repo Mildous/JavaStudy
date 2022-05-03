@@ -1,0 +1,32 @@
+package Task0427_01_02;
+
+public class Snack {
+	String shape;	//¸ð¾ç
+	String taste;	//¸À
+	String price;	//Èñ¸Á°¡°Ý
+	int qty;	//ÁÖ¹®¼ö·®
+	
+	Snack(){
+		this("»õ¿ì", "»õ¿ì", 0, 1);
+	}
+	
+	Snack(String taste, String shape, String price, int qty){
+		this.shape = shape;
+		this.taste = taste;
+		this.price = price;
+		this.qty = qty;
+	}
+	
+	Snack(String taste, String shape, int qty){
+		this(taste, shape, null, qty);
+	}
+	void showSnackOrder() {
+		if(price != null && price.length()!=0)
+			System.out.println(shape+"¸ð¾ç, "+taste+"¸À, Èñ¸Á°¡°Ý: "+price+"¿ø, "+qty+"°³");
+		else
+			System.out.println(shape+"¸ð¾ç, "+taste+"¸À, "+qty+"°³");
+		
+	}
+	
+
+}

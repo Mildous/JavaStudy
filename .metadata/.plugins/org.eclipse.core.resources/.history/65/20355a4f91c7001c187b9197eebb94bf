@@ -1,0 +1,14 @@
+package Chap06;
+
+public class Buyer {
+	int money = 1000;
+	int bonusPoint = 0;
+	
+	void buy(Tv t) {
+		if(money < t.price) {
+			System.out.println("잔액이 부족하여 구입불가");
+		}
+		money = money - t.price;
+	}
+
+}

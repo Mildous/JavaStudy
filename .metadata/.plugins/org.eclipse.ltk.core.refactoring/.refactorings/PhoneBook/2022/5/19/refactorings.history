@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;PhoneBook/src/step5&apos;&#x0D;&#x0A;- Original project: &apos;PhoneBook&apos;&#x0D;&#x0A;- Destination element: &apos;PhoneBook/src/step5&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     step4.Person.java&#x0D;&#x0A;     step4.PhoneBookVer04.java&#x0D;&#x0A;     step4.MenuViewer.java&#x0D;&#x0A;     step4.PhoneBookManager.java" description="Copy compilation units" destination="/src&lt;step5" element1="/src&lt;step4{Person.java" element2="/src&lt;step4{PhoneBookVer04.java" element3="/src&lt;step4{MenuViewer.java" element4="/src&lt;step4{PhoneBookManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1651448321607" units="4" version="1.0"/>
+</session>

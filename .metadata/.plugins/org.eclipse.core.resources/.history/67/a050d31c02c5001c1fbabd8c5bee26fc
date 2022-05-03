@@ -1,0 +1,17 @@
+package Test;
+
+public class TvTest {
+
+	public static void main(String[] args) {
+		
+		Tv[] t = new Tv[3];
+		for(int i=0; i<t.length; i++)
+			t[i] = new Tv();
+			t[i].channel = 10;
+			t[i].channelDown();
+			System.out.println("현재 채널은"+t.channel+"번 입니다.");
+			t[i].channelUp();
+			System.out.println("현재 채널은"+t.channel+"번 입니다.");
+	}
+
+}

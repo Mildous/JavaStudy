@@ -1,0 +1,7 @@
+package Chap06;
+
+public class Buyer {
+	int money = 1000;
+	int bonusPoint = 0;
+
+}

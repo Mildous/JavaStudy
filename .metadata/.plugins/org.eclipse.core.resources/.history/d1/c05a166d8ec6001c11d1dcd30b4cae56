@@ -1,0 +1,28 @@
+package Task0427_01;
+
+public class Snack {
+	String taste;
+	String shape;
+	int price;
+	int qty;
+	
+	Snack(){
+		this("货快", "货快", 1200, 0);
+	}
+	
+	Snack(String taste, String shape, int price){
+		this.taste = taste;
+		this.shape = shape;
+		this.price = price;
+		this.qty = qty;
+	}
+	
+	Snack(String taste, String shape){
+		this(taste, shape, 0);
+	}
+	void showSnackOrder() {
+		
+	}
+	
+
+}
