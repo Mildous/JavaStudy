@@ -1,8 +1,0 @@
-package Chap06;
-
-public class Computer extends Product {
-	Computer(){
-		super(200);
-	}
-
-}

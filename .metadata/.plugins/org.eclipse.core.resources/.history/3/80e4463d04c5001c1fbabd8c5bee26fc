@@ -1,8 +1,0 @@
-package Test;
-
-public class Time {
-	int hour;
-	int minute;
-	float second;
-
-}

@@ -1,6 +1,0 @@
-package Task01;
-//색상, 화면크기, 저장용량, 메모리용량 , CPU
-public class Notebook {
-	
-
-}

@@ -1,9 +1,0 @@
-package Task01;
-
-public class Umbrella {
-	
-	String type;//타입 장우산, 접이식우산
-	String pattern;//무늬 민무늬, 도트무늬
-	String color;//색상
-
-}

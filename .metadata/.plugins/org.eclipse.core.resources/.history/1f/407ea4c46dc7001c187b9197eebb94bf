@@ -1,6 +1,0 @@
-package Chap02;
-
-public class Singleton {
-	private Singleton(){}
-
-}
