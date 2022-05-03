@@ -1,5 +1,0 @@
-package Chap04;
-
-public class Ambulance extends car {
-
-}

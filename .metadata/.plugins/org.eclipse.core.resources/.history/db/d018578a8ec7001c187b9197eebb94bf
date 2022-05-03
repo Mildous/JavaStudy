@@ -1,5 +1,0 @@
-package Chap06;
-
-public class Audio extends Product {
-
-}
