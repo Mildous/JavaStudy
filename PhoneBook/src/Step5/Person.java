@@ -1,4 +1,4 @@
-package Step5;
+package step5;
 
 public class Person {
 	String name;
