@@ -1,0 +1,7 @@
+List : 순서O, 중복O
+	- ArrayList : 순차적 추가/삭제 시 빠름
+	- LinkedList : 중간 데이터 추가/삭제 시 빠름
+Set : 순서X, 중복X
+	- HashSet :  
+	- TreeSet : 
+Map : 순서X, 키중복X / 값중복O
