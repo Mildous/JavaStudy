@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class PhoneBookVer01 {
     static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
 
         int choice = 0;
@@ -23,7 +22,7 @@ public class PhoneBookVer01 {
             }
         }
     }
-        static void inputData() {
+    static void inputData(){
             System.out.print("이름 ==> ");
             String name = sc.nextLine();
             System.out.print("전번 ==> ");
@@ -35,11 +34,11 @@ public class PhoneBookVer01 {
             p.showPhoneInfo();
         }
 
-        static void showMenu() {
+    static void showMenu(){
             System.out.println("==== MENU ====");
             System.out.println("1. 입력");
             System.out.println("2. 종료");
-            System.out.printf("=> ");
+            System.out.print("=> ");
         }
 
     }
