@@ -1,3 +1,5 @@
+package pokemon_Ver01;
+
 import java.util.Scanner;
 
 public class MainMenuViewer {

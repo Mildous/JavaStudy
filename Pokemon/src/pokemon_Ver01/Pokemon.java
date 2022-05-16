@@ -1,3 +1,5 @@
+package pokemon_Ver01;
+
 public class Pokemon {
     String name;
     int power;

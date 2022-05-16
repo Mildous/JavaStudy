@@ -1,3 +1,5 @@
+package pokemon_Ver01;
+
 public class GameManager {
     final int MAX_CNT=10;
     Pokemon[] inventory = new Pokemon[MAX_CNT];

@@ -1,17 +1,20 @@
+package pokemon_Ver01;
+
 import java.util.Scanner;
 
 public class GamePlay_Main {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         GameManager gm = new GameManager();
 
         int choice = 0;
 
-        while(true) {
+        while (true) {
             MainMenuViewer.showMenu();
             choice = Integer.parseInt(sc.nextLine());
 
-            switch(choice) {
+            switch (choice) {
                 case 1:
                     //입장. 서브메뉴(지역)를 호출한다.
                     break;
