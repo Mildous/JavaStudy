@@ -11,7 +11,7 @@ public class GamePlay_Main {
         int choice = 0;
 
         while (true) {
-            MainMenuViewer.showMenu();
+            MenuViewer.showMenu();
             choice = Integer.parseInt(sc.nextLine());
 
             switch (choice) {
@@ -19,7 +19,7 @@ public class GamePlay_Main {
                     //입장. 서브메뉴(지역)를 호출한다.
                     break;
                 case 2:
-                    gm.inventory(); //잡은 포켓몬을 저장한 가방의 전체 내용을 출력한다
+                    gm.pokemonBag(); //잡은 포켓몬을 저장한 가방의 전체 내용을 출력한다
                     break;
                 case 3:
                     //게임의 상세정보를 출력한다. ex)지역별 출몰 포켓몬, 확률, cp범위

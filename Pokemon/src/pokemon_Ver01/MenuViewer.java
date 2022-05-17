@@ -2,7 +2,7 @@ package pokemon_Ver01;
 
 import java.util.Scanner;
 
-public class MainMenuViewer {
+public class MenuViewer {
     static Scanner sc = new Scanner(System.in);
 
     static void showMenu() { //메인메뉴 출력
