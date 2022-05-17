@@ -1,25 +1,24 @@
 package pokemon_Ver01;
 
 public class GameManager {
-    final int MAX_CNT=10;
-    Pokemon[] inventory = new Pokemon[MAX_CNT];
-    int curCnt = 0;
+        final int MAX_CNT=10;
+        Pokemon[] inventory = new Pokemon[MAX_CNT];
+        int curCnt = 0;
 
-    //잡은 포켓몬을 저장하는 포켓몬 가방
-    void inventory() {
-        Pokemon[] p = new Pokemon[3];
+        //잡은 포켓몬을 저장하는 포켓몬 가방
+        void inventory() {
+            Pokemon[] p = new Pokemon[3];
+            p[0] = new Pokemon("피카츄", "전기", 500);
+            p[1] = new Pokemon("이상해씨", "풀", 400);
+            p[2] = new Pokemon("파이리", "불", 450);
 
-        p[0] = new Pokemon("피카츄", 500);
-        p[1] = new Pokemon("라이츄", 400);
-        p[2] = new Pokemon("파이리", 450);
-
-        for(int i=0; i<p.length; i++) {
-            p[i].showGetMon();
+            for(int i=0; i<p.length; i++) {
+                p[i].showGetMon();
+            }
         }
-    }
 
-    //가방에서 검색
-    private int search(String name) {
+        //가방에서 검색
+        private int search(String name) {
 
         for(int i=0; i<curCnt; i++) {
             if(name.equals(inventory[i].name)) {
@@ -46,5 +45,18 @@ public class GameManager {
         }else {
             System.out.println("소유하지않은 포켓몬입니다.");
         }
+
+    }
+    public Pokemon getPokemon(List<Pokemon> pokemons, String selectType){
+        String type = selectType;
+        List<Pokemon> typePokemons = new ArrayList();
+        for(int i = 0 ; i < pokemons.size() < i++){
+            if(type.equals(pokemons.get(i).type)){
+                typePokemons.add(poketmons.get(i));
+            }
+        }
+        Pokemon p = typePokemons.get(Math.random()*3);
+        p.attack = Math.random()*100;
+        return p;
     }
 }
