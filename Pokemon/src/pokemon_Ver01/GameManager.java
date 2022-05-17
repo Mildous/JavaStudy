@@ -6,7 +6,7 @@ public class GameManager {
     int curCnt = 0;
 
     //잡은 포켓몬을 저장하는 포켓몬 가방
-    void inventory() {
+    void pokemonBag() {
         Pokemon[] p = new Pokemon[3];
 
         p[0] = new Pokemon("피카츄", 500);
@@ -32,7 +32,7 @@ public class GameManager {
     //박사에게 보내기
     void deleteData() {
         System.out.print("내보낼 포켓몬 ==> ");
-        String name = MainMenuViewer.sc.nextLine();
+        String name = MenuViewer.sc.nextLine();
         int index = -1;
         index = search(name);
 
