@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class MenuViewer {
     static Scanner sc = new Scanner(System.in);
 
-    static void showMenu() { //ë©”ì¸ë©”ë‰´ ì¶œë ¥
+    static void showMenu() { //¸ÞÀÎ¸Þ´º Ãâ·Â
         System.out.println("== Pokemon World! ==");
-        System.out.println("1. í¬ì¼“ëª¬ ìž¡ê¸°");
-        System.out.println("2. í¬ì¼“ëª¬ ê°€ë°©");
-        System.out.println("3. ê²Œìž„ì¢…ë£Œ");
+        System.out.println("1. Æ÷ÄÏ¸ó Àâ±â");
+        System.out.println("2. Æ÷ÄÏ¸ó °¡¹æ");
+        System.out.println("3. °ÔÀÓÁ¾·á");
         System.out.print("-> ");
     }
 }
