@@ -3,13 +3,30 @@ package poketmon;
 import java.util.Scanner;
 
 public class MenuViewer {
-    static Scanner sc = new Scanner(System.in);
 
-    static void showMenu() { //¸ÞÀÎ¸Þ´º Ãâ·Â
+
+    static void showMainMenu() { //ë©”ì¸ë©”ë‰´ ì¶œë ¥
         System.out.println("== Pokemon World! ==");
-        System.out.println("1. Æ÷ÄÏ¸ó Àâ±â");
-        System.out.println("2. Æ÷ÄÏ¸ó °¡¹æ");
-        System.out.println("3. °ÔÀÓÁ¾·á");
+        System.out.println("1. í¬ì¼“ëª¬ ìž¡ê¸°");
+        System.out.println("2. í¬ì¼“ëª¬ ê°€ë°©");
+        System.out.println("3. í¬ì¼“ëª¬ ì‚­ì œ");
+        System.out.println("4. ê²Œìž„ì¢…ë£Œ");
         System.out.print("-> ");
     }
+
+    static void showCatchMenu() { //ë©”ì¸ë©”ë‰´ ì¶œë ¥
+        System.out.println("== select field! ==");
+        System.out.println("1. ì´ˆì›");
+        System.out.println("2. ì‚¬ë§‰");
+        System.out.println("3. ë°”ë‹¤");
+        System.out.println("4. ì „ê¸°");
+        System.out.print("-> ");
+    }
+
+    static void deleteMenu() {
+        System.out.println("ì‚­ì œí•  ë²ˆí˜¸ë¥¼ ìž…ë ¥í•˜ì„¸ìš”");
+        System.out.print("-> ");
+    }
+
+
 }
