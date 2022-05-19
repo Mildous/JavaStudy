@@ -38,7 +38,7 @@ public class PlayGame {
                     	gm.showBagInPokekmon();
                     	System.out.print("-> ");
                         gm.deletePoketmon(Integer.parseInt(GameConst.sc.nextLine()));
-                        System.out.println(s"오박사에게 보냈습니다..");
+                        System.out.println("오박사에게 보냈습니다..");
                     }catch (NumberFormatException e){
                         System.out.println("숫자만 입력하세요..");
                     }catch (IndexOutOfBoundsException e){
