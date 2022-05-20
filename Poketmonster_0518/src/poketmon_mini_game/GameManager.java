@@ -1,16 +1,18 @@
-package poketmon;
+package poketmon_mini_game;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GameManager {
 
-	public void showBagInPoketmon(){
+	public void showBagInPokekmon(){
         for(int i = 0; i < GameConst.poketmonBag.size(); i++){
             Poketmon p = GameConst.poketmonBag.get(i);
-            System.out.println("No. "+(i+1)+", "+"LV : " + p.level + ", NAME : " + p.name + ", CP : " + p.cp);
+            System.out.println("["+(i+1)+"] "+"[Lv." + p.level + " " + p.name + "] [CP: " + p.cp +"]");
         }
         if(GameConst.poketmonBag.isEmpty()){
-            System.out.println("empty bag..");
+            System.out.println("빈 가방입니다..");
         }
     }
 	
@@ -23,27 +25,16 @@ public class GameManager {
             }
         }
         Poketmon p = typePoketmons.get((int)(Math.random()*3));
-        /*
-        switch (p.level){
-            case 1:
-                p.cp = getRandomNumber(GameConst.LV1_CP_MAP.get("min"), GameConst.LV1_CP_MAP.get("max"));
-                    break;
-            case 2:
-                p.cp = getRandomNumber(GameConst.LV2_CP_MAP.get("min"), GameConst.LV2_CP_MAP.get("max"));
-                    break;
-            case 3:
-                p.cp = getRandomNumber(GameConst.LV3_CP_MAP.get("min"), GameConst.LV3_CP_MAP.get("max"));
-                    break;
-        }*/
+        
         p.cp = getRandomNumber(GameConst.LV_CP_MAPPING.get(p.level).get("min"), GameConst.LV_CP_MAPPING.get(p.level).get("max"));
-        System.out.println("야생의 포켓몬 "+p.name+"을 만났다"+p.cp);
+        System.out.println("야생의 포켓몬 "+p.name+"이(가) 나타났다!");
         p.showGetMon();
         if((new Random().nextInt(100) < GameConst.LV_CP_MAPPING.get(p.level).get("p"))){
-            System.out.println("야생의 포켓몬을 잡는데 성공했다");
+            System.out.println("와! 잡았다!");
             setPoketmon(p);
             return true;
         }else{
-            System.out.println("야생의 포켓몬을 잡는데 실패했다");
+            System.out.println("놓쳐버렸다..");
             return false;
         }
     }
@@ -53,8 +44,8 @@ public class GameManager {
     }
 
     public void deletePoketmon(int select){
-
-        GameConst.poketmonBag.remove(select-1); //0부터 시작(-1)
+    	
+        GameConst.poketmonBag.remove(select-1);
     }
 
     public int getRandomNumber(int min, int max) {

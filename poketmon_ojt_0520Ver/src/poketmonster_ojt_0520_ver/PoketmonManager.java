@@ -1,4 +1,4 @@
-package poketmonster_ojt;
+package poketmonster_ojt_0520_ver;
 
 import java.util.ArrayList;
 

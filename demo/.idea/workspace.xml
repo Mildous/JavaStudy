@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="116048fc-785c-46e1-b382-ae039bf94798" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../Poketmon/src/poketmon/GameConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Poketmon/src/poketmon/GameConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Poketmon/src/poketmon/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Poketmon/src/poketmon/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Poketmon/src/poketmon/PlayGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Poketmon/src/poketmon/PlayGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_Poketmon/src/poketmon_mini_game/GameConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Poketmon/src/poketmon_mini_game/GameConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project_Poketmon/src/poketmon_mini_game/MenuViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project_Poketmon/src/poketmon_mini_game/MenuViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/src/poketmonster_ojt/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/src/poketmonster_ojt_0520_ver/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/src/poketmonster_ojt/Poketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/src/poketmonster_ojt_0520_ver/Poketmon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/src/poketmonster_ojt/PoketmonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/src/poketmonster_ojt_0520_ver/PoketmonManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_poketmon_ojt/src/poketmonster_ojt/PoketmonWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../poketmon_ojt_0520Ver/src/poketmonster_ojt_0520_ver/PoketmonWorld.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="29QRCLyBBRqV69zqPA7d88I2BJG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="116048fc-785c-46e1-b382-ae039bf94798" name="변경" comment="" />
+      <created>1653043195763</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653043195763</updated>
+      <workItem from="1653043197027" duration="136000" />
+      <workItem from="1653043435685" duration="74000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

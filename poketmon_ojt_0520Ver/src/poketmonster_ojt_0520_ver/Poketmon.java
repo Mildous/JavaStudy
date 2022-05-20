@@ -1,4 +1,4 @@
-package poketmonster_ojt;
+package poketmonster_ojt_0520_ver;
 
 class Mewtwo extends Poketmon{
 	Mewtwo(){

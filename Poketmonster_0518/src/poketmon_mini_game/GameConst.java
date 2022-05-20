@@ -1,9 +1,14 @@
 package poketmon_mini_game;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
 
 public class GameConst {
-    static Map<Integer, String> menu = new HashMap();
+    static Map<Integer, String> menu = new HashMap(); 
     static Scanner sc = new Scanner(System.in);
     static Map<Integer, String> poketmonType = Map.of(
             1, "풀",

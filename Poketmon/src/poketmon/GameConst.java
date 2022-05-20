@@ -3,7 +3,6 @@ package poketmon;
 import java.util.*;
 
 public class GameConst {
-    private final int MAX_POKETMON_SIZE = 12;
     static Map<Integer, String> menu = new HashMap();
     static Scanner sc = new Scanner(System.in);
     static Map<Integer, String> poketmonType = Map.of(

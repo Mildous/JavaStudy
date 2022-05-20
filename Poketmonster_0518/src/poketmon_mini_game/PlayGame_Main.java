@@ -1,54 +1,51 @@
-package poketmon;
+package poketmon_mini_game;
 
-import java.awt.*;
-import java.util.*;
-
-public class PlayGame {
+public class PlayGame_Main {
 
     public static void main(String[] args) {
-    	System.out.println("포켓몬 월드에 오신것을 환영합니다!");
+    	System.out.println("Hello Poketmon World!");
         GameManager gm = new GameManager();
-        int choice = 0;
+        int choice = 0; 
         while (true) {
             switch (choice) {
-                case 0:
+                case 0: //메인메뉴
                     MenuViewer.showMainMenu();
                     try {
                         choice = Integer.parseInt(GameConst.sc.nextLine());
                     }catch (NumberFormatException e){
-                        System.out.println("not allow strings..");
+                        System.out.println("숫자만 입력하세요..");
                     }
                     break;
-                case 1:
+                case 1: //MenuViewer의 지역메뉴 showCatchMenu()호출
                 	MenuViewer.showCatchMenu();
-                    //int selectType = Integer.parseInt(GameConst.sc.nextLine());
-                    //Poketmon p = gm.getPoketmon(selectType);
                     if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
-                        System.out.println("success catch..");
+                        System.out.println("가방에 보관했습니다..");
                         choice = 2;
                     }else{
-                        System.out.println("fail catch..");
+                        System.out.println("메인메뉴로 돌아갑니다..");
                         choice = 0;
                     }
                     break;
                 case 2:
-                    gm.showBagInPoketmon();
+                    gm.showBagInPokekmon();
                     choice = 0;
                     break;
                 case 3:
                     MenuViewer.deleteMenu();
                     try {
+                    	gm.showBagInPokekmon();
+                    	System.out.print("-> ");
                         gm.deletePoketmon(Integer.parseInt(GameConst.sc.nextLine()));
-                        System.out.println("삭제완료");
+                        System.out.println("오박사에게 보냈습니다..");
                     }catch (NumberFormatException e){
-                        System.out.println("not allow strings..");
+                        System.out.println("숫자만 입력하세요..");
                     }catch (IndexOutOfBoundsException e){
-                        System.out.println("range out.. max range : " + (GameConst.poketmonBag.size()));
+                        System.out.println("빈 가방입니다.." + (GameConst.poketmonBag.size()));
                     }
                     choice = 0;
                     break;
                 case 4:
-                    System.out.println("게임종료");
+                    System.out.println("게임종료..");
                     return; 
             }
         }
