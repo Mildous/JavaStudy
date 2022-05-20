@@ -16,7 +16,7 @@ public class MenuViewer {
         System.out.println("===== MAP ======");
         System.out.println("1. 저 푸른 초원");
         System.out.println("2. 뜨거운 사막지대");
-        System.out.println("3. 제주도 푸른 바다�");
+        System.out.println("3. 제주도 푸른 바다");
         System.out.println("4. 한국전력공사");
         System.out.print("-> ");
     }
