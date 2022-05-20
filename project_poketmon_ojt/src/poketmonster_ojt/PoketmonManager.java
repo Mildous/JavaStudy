@@ -38,14 +38,14 @@ public class PoketmonManager {
 			System.out.println("<<저 푸른 초원>>");
 			System.out.println("  환영합니다!!  ");
 			for(int i=0; i<allPoketmons.size(); i++) {
-				if(allPoketmons.get(i).attribute.equals("불")) {
+				if(allPoketmons.get(i).attribute.equals("풀")) {
 					fieldmons.add(allPoketmons.get(i));
 				}
 			}
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(allPoketmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
@@ -80,7 +80,7 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(allPoketmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
@@ -108,14 +108,14 @@ public class PoketmonManager {
 			System.out.println("<<제주도 푸른 바다>>");
 			System.out.println("  환영합니다!!  ");
 			for(int i=0; i<allPoketmons.size(); i++) {
-				if(allPoketmons.get(i).attribute.equals("불")) {
+				if(allPoketmons.get(i).attribute.equals("물")) {
 					fieldmons.add(allPoketmons.get(i));
 				}
 			}
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(allPoketmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
@@ -150,7 +150,7 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(allPoketmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
@@ -208,16 +208,16 @@ public class PoketmonManager {
 		allPoketmons.add(new Paras());
 		allPoketmons.add(new Ttubuckcho());
 		//-------------------------------물
-		allPoketmons.add(new Piri());
-		allPoketmons.add(new Sixtail());
-		allPoketmons.add(new Gady());
+		allPoketmons.add(new Ggobugi());
+		allPoketmons.add(new Balcheangyee());
+		allPoketmons.add(new Golapaduck());
 		//-------------------------------전기
-		allPoketmons.add(new Yeesanghaessi());
-		allPoketmons.add(new Paras());
-		allPoketmons.add(new Ttubuckcho());
+		allPoketmons.add(new Pikachu());
+		allPoketmons.add(new Coil());
+		allPoketmons.add(new Jjiririgong());
 	}
 	
-	void fight() {
+	void fight() { //뮤츠와 대전하기
 		int choice=0;
 		int power=0;
 		if(poketmonBag.size()>=3) {

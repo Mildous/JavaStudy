@@ -10,7 +10,7 @@ public class GameManager {
             System.out.println("["+(i+1)+"] "+"[Lv." + p.level + " " + p.name + "] [CP: " + p.cp +"]");
         }
         if(GameConst.poketmonBag.isEmpty()){
-            System.out.println("ºó °¡¹æÀÔ´Ï´Ù..");
+            System.out.println("ë¹ˆ ê°€ë°©ì…ë‹ˆë‹¤..");
         }
     }
 	
@@ -25,14 +25,14 @@ public class GameManager {
         Poketmon p = typePoketmons.get((int)(Math.random()*3));
         
         p.cp = getRandomNumber(GameConst.LV_CP_MAPPING.get(p.level).get("min"), GameConst.LV_CP_MAPPING.get(p.level).get("max"));
-        System.out.println("¾ß»ıÀÇ Æ÷ÄÏ¸ó "+p.name+"ÀÌ(°¡) ³ªÅ¸³µ´Ù!");
+        System.out.println("ì•¼ìƒì˜ í¬ì¼“ëª¬ \"+p.name+\"ì´(ê°€) ë‚˜íƒ€ë‚¬ë‹¤!");
         p.showGetMon();
         if((new Random().nextInt(100) < GameConst.LV_CP_MAPPING.get(p.level).get("p"))){
-            System.out.println("¿Í! Àâ¾Ò´Ù!");
+            System.out.println("ì™€! ì¡ì•˜ë‹¤!");
             setPoketmon(p);
             return true;
         }else{
-            System.out.println("½ÇÆĞÇß´Ù..");
+            System.out.println("ë†“ì³ë²„ë ¸ë‹¤..");
             return false;
         }
     }
