@@ -45,14 +45,14 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(choice2)+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
 			if(choice3.equals("y")) {
-				if(Menu.random.nextInt(0, 101)<=allPoketmons.get(Menu.random.nextInt(0, allPoketmons.size())).percent) {
+				if(Menu.random.nextInt(0, 101)<=fieldmons.get(Menu.random.nextInt(0, fieldmons.size())).percent) {
 					System.out.println("잡았습니다!");
-					tmp=allPoketmons.get(choice2);
+					tmp=fieldmons.get(choice2);
 					allPoketmons.removeAll(allPoketmons);
 					fieldmons.removeAll(fieldmons);
 					return tmp;
@@ -80,14 +80,14 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(choice2)+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
 			if(choice3.equals("y")) {
-				if(Menu.random.nextInt(0, 101)<=allPoketmons.get(Menu.random.nextInt(0, allPoketmons.size())).percent) {
+				if(Menu.random.nextInt(0, 101)<=fieldmons.get(Menu.random.nextInt(0, fieldmons.size())).percent) {
 					System.out.println("잡았습니다!");
-					tmp=allPoketmons.get(choice2);
+					tmp=fieldmons.get(choice2);
 					allPoketmons.removeAll(allPoketmons);
 					fieldmons.removeAll(fieldmons);
 					return tmp;
@@ -115,14 +115,14 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(choice2)+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
 			if(choice3.equals("y")) {
-				if(Menu.random.nextInt(0, 101)<=allPoketmons.get(Menu.random.nextInt(0, allPoketmons.size())).percent) {
+				if(Menu.random.nextInt(0, 101)<=fieldmons.get(Menu.random.nextInt(0, fieldmons.size())).percent) {
 					System.out.println("잡았습니다!");
-					tmp=allPoketmons.get(choice2);
+					tmp=fieldmons.get(choice2);
 					allPoketmons.removeAll(allPoketmons);
 					fieldmons.removeAll(fieldmons);
 					return tmp;
@@ -150,14 +150,14 @@ public class PoketmonManager {
 			System.out.println();
 			choice2=Menu.random.nextInt(0,fieldmons.size());
 			
-			System.out.println(fieldmons.get(Menu.random.nextInt(0,fieldmons.size()))+" 등장!!");
+			System.out.println(fieldmons.get(choice2)+" 등장!!");
 			System.out.println("잡으시겠습니까? (y/n)");
 			
 			choice3=Menu.sc.nextLine();
 			if(choice3.equals("y")) {
-				if(Menu.random.nextInt(0, 101)<=allPoketmons.get(Menu.random.nextInt(0, allPoketmons.size())).percent) {
+				if(Menu.random.nextInt(0, 101)<=fieldmons.get(Menu.random.nextInt(0, fieldmons.size())).percent) {
 					System.out.println("잡았습니다!");
-					tmp=allPoketmons.get(choice2);
+					tmp=fieldmons.get(choice2);
 					allPoketmons.removeAll(allPoketmons);
 					fieldmons.removeAll(fieldmons);
 					return tmp;
