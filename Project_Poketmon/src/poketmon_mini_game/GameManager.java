@@ -4,12 +4,12 @@ import java.util.*;
 
 public class GameManager {
 
-	public void showBagInPokekmon(){
+	public void showBagInPokekmon(){ //가방에 담긴 list를 보여주는 함수
         for(int i = 0; i < GameConst.poketmonBag.size(); i++){
-            Poketmon p = GameConst.poketmonBag.get(i);
+            Poketmon p = GameConst.poketmonBag.get(i); //poketmonBag에 담긴것을 p에 대입
             System.out.println("["+(i+1)+"] "+"[Lv." + p.level + " " + p.name + "] [CP: " + p.cp +"]");
         }
-        if(GameConst.poketmonBag.isEmpty()){
+        if(GameConst.poketmonBag.isEmpty()){ //비어있는 list일 경우
             System.out.println("빈 가방입니다..");
         }
     }
@@ -25,7 +25,7 @@ public class GameManager {
         Poketmon p = typePoketmons.get((int)(Math.random()*3));
         
         p.cp = getRandomNumber(GameConst.LV_CP_MAPPING.get(p.level).get("min"), GameConst.LV_CP_MAPPING.get(p.level).get("max"));
-        System.out.println("야생의 포켓몬 \"+p.name+\"이(가) 나타났다!");
+        System.out.println("야생의 포켓몬 "+p.name+"이(가) 나타났다!");
         p.showGetMon();
         if((new Random().nextInt(100) < GameConst.LV_CP_MAPPING.get(p.level).get("p"))){
             System.out.println("와! 잡았다!");
