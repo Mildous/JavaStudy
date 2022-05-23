@@ -32,7 +32,7 @@ public class CartTest {
     public static void productOutput(Cart cart, List<Product> productList) {
         for(int i = 0 ; i < productList.size(); i++){
             Product v = productList.get(i);
-            System.out.println("num : " + i + "[" + v.categoryName + " - " +v.name + " - "+v.price+"]ß");
+            System.out.println("num : " + i + "[" + v.categoryName + " - " +v.name + " - "+v.price+"]");
         }
         System.out.println("choice product number..");
         Scanner s = new Scanner(System.in);

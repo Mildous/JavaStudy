@@ -1,11 +1,14 @@
 package poketmon;
 
+import java.util.List;
+
 public class PlayGameMain {
 
     public static void main(String[] args) {
     	System.out.println("Hello Poketmon World!");
         GameManager gm = new GameManager();
         int choice = 0; 
+        
         while (true) {
             switch (choice) {
                 case 0: //메인메뉴
@@ -46,6 +49,32 @@ public class PlayGameMain {
                     choice = 0; //초기메뉴로 이동
                     break;
                 case 4:
+                	
+                	try {
+                		for(int i=0; i<3; i++) { 
+                			System.out.println("대결할 포켓몬을 고르세요..");
+                			gm.showBagInPokekmon(); //내용 출력
+                			System.out.print("-> "); //고를 포켓몬을 입력받는다
+                			gm.selectVsMewtwo(Integer.parseInt(GameConst.sc.nextLine())); //입력받은 값을 List에 담는다
+                		
+                			for(int j = 0 ; j < GameConst.vsList.size(); j++){ //고른 포켓몬 출력하기
+                				Poketmon p = GameConst.vsList.get(j);
+                				System.out.println("["+(j+1)+"]"+" ["+ p.name +"] [ CP "+p.cp+"]");
+                			}
+                		}
+                		System.out.println("total CP.." + gm.getTotalCp()); //CP합계 출력
+                		if(gm.getTotalCp() > 200) { //뮤츠 CP설정, 이겼을 경우
+                			System.out.println("You win..");
+                		}else {
+                			System.out.println("Fail...");
+                		}	
+                	}catch (NumberFormatException e) {
+                		System.out.println("숫자만 입력하세요..");
+                	}
+                	System.out.println("메인메뉴로 돌아갑니다.."); // false일 경우
+                	choice = 0;
+                	break;
+                case 5:
                     System.out.println("게임종료..");
                     return; //프로그램 종료
             }

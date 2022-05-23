@@ -3,6 +3,7 @@ package poketmon;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class GameManager {
 
@@ -54,6 +55,17 @@ public class GameManager {
     public int getRandomNumber(int min, int max) { //최소값과 최대값 사이에서 랜덤한 수를 생성하는 메서드
         return (int) ((Math.random() * (max - min)) + min);
     }
+    
+    public void selectVsMewtwo(int select) { //뮤츠와 싸울 포켓몬을 입력받은 후 vsList에 추가 및 기존 가방에서 삭제 
+        	GameConst.vsList.add(GameConst.poketmonBag.get(select-1));
+            GameConst.poketmonBag.remove(select-1);
+    }
+    
+    public int getTotalCp() { //vsList에 담긴 포켓몬의 cp를 더한 총 합
+    	return (int) GameConst.vsList.stream()
+                .collect(Collectors.summarizingInt(v -> v.cp)).getSum();
+    }
+    
 
 
 }

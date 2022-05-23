@@ -8,7 +8,8 @@ public class MenuViewer {
         System.out.println("1. 포켓몬 잡기"); //showCatchMenu로
         System.out.println("2. 포켓몬 가방"); //showBagInPokekmon()으로
         System.out.println("3. 가방 정리"); //deletePoketmon()으로
-        System.out.println("4. 게임 종료"); //프로그램 종료
+        System.out.println("4. 뮤츠와의 대결");
+        System.out.println("5. 게임 종료"); //프로그램 종료
         System.out.print("-> ");
     }
 
