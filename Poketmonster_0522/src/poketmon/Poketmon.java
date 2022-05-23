@@ -19,7 +19,7 @@ public class Poketmon {
     }
 
     void showGetMon() { //출력 양식 메서드 - getPoketmon()에서 사용
-        System.out.println("             [Lv."+level+" "+name+"] [CP: "+cp+"]");
+        System.out.println("           [Lv."+level+" "+name+"] [CP: "+cp+"]");
     }
 
 }

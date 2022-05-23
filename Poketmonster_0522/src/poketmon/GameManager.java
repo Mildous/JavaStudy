@@ -12,10 +12,10 @@ public class GameManager {
 	Scanner s = new Scanner(System.in);
 
 	public void showBagInPokekmon(){ //가방에 담긴 포켓몬을 보여주는 메서드
-        System.out.println("             [나의 포켓몬 가방]");
+        System.out.println("           [나의 포켓몬 가방]");
         for(int i = 0; i < GameConst.poketmonBag.size(); i++){ //arrayList의 크기만큼
             Poketmon p = GameConst.poketmonBag.get(i); //arrayList에 담긴 내용을
-            System.out.println("             ["+(i+1)+"] "+"[" + p.name + "] [CP: " + p.cp +"]"); //출력한다
+            System.out.println("           ["+(i+1)+"] "+"[" + p.name + "] [CP: " + p.cp +"]"); //출력한다
         }
 
         if(GameConst.poketmonBag.isEmpty()){ //arrayList가 비어있을 경우
@@ -40,7 +40,7 @@ public class GameManager {
 		System.out.println("              "+p.name+"이(가) 나타났다!  ");
 		System.out.println("         ==========================　");
         p.showGetMon(); //출현한 포켓몬을 Poketmon 클래스에서 지정해둔 양식에 맞춰 출력
-        System.out.println("             잡으시겠습니까? [y/n]");
+        System.out.println("           잡으시겠습니까? [y/n]");
         s = new Scanner(System.in);
         if(choice = "Y".equalsIgnoreCase(s.nextLine()))
         	if((new Random().nextInt(100) < GameConst.LV_CP_MAPPING.get(p.level).get("p"))){ //p.level에 해당되는 p(상수로 정해둔 확률)가 랜덤으로 생성된 숫자보다 클 때 (p가 90이면 90%확률)
@@ -50,7 +50,7 @@ public class GameManager {
         		setPoketmon(p); //poketmonBag에 에 값을 저장한다.
         		return true; //PlayGame의 case2: if문 실행
         	}else{
-        		System.out.println("             "+p.name+"은(는) 도망갔다..");
+        		System.out.println("           "+p.name+"은(는) 도망갔다..");
         		return false; //PlayGame의 case2: else문 실행
         		}
         else return false;

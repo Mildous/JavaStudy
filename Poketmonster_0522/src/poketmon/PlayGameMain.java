@@ -55,29 +55,25 @@ public class PlayGameMain {
                 	}
                 	try {
                 		for(int i=0; i<3; i++) { 
-                			System.out.println("             대결할 포켓몬을 고르세요..");
+                			MenuViewer.vsMenu();
                 			gm.showBagInPokekmon(); //내용 출력
                 			gm.selectVsMewtwo(Integer.parseInt(GameConst.sc.nextLine())); //입력받은 값을 List에 담는다
                 		
                 			for(int j = 0 ; j < GameConst.vsList.size(); j++){ //고른 포켓몬 출력하기
                 				Poketmon p = GameConst.vsList.get(j);
-                				System.out.println("             ["+(j+1)+"]"+" ["+ p.name +"] [ CP "+p.cp+"]");
+                				System.out.println("           ["+(j+1)+"]"+" ["+ p.name +"] [ CP "+p.cp+"]");
                 			}
                 		}
-                		System.out.println("             TOTAL " + gm.getTotalCp()); //CP합계 출력
+                		System.out.println("           TOTAL " + gm.getTotalCp()); //CP합계 출력
                 		if(gm.getTotalCp() > 200) { //뮤츠 CP설정, 이겼을 경우
-                			System.out.println();
-                			System.out.println("                     승리!");
-                			System.out.println();
+                			System.out.println("                    <승리>");
                 		}else {
-                			System.out.println();
-                			System.out.println("                     패배..");
-                			System.out.println();
+                			System.out.println("                    <패배>");
                 		}
                 	}catch (NumberFormatException e) {
                 		System.out.println("            숫자만 입력하세요..");
                 	}
-                	System.out.println("            메인메뉴로 돌아갑니다.."); // false일 경우
+                	System.out.println("             메인메뉴로 돌아갑니다.."); // false일 경우
                 	choice = 0;
                 	break;
                 case 5:
