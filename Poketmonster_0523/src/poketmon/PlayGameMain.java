@@ -6,26 +6,67 @@ public class PlayGameMain {
 
     public static void main(String[] args) {
         GameManager gm = new GameManager();
-        int choice = 0; 
+        int choice = 0;
+        String num;
+
+        boolean loginResult = false;
+
+        gm.readFromFile();
+        while (loginResult == false) {
+            MenuViewer.loginMenu();
+            choice = Integer.parseInt(GameConst.sc.nextLine());
+            switch (choice) {
+                case 1:
+                    gm.newLogIn();
+                    break;
+                case 2:
+                    loginResult = gm.login();
+                    choice = 0;
+                    break;
+                case 3:
+                    System.out.println("종료합니다");
+                    gm.saveToFile();
+                    System.exit(0);
+            }
+        }
         
-        while (true) {
+        while (loginResult == true) {
             switch (choice) {
                 case 0: //메인메뉴
                     MenuViewer.showMainMenu();
                     try {
-                        choice = Integer.parseInt(GameConst.sc.nextLine());
-                    }catch (NumberFormatException e){
-                        System.out.println("             숫자만 입력하세요..");
+                        num = GameConst.sc.nextLine().trim();
+                        if (num.length() > 0 && num.length() < 2) {
+                            choice = Integer.parseInt(num);
+                        } else {
+                            System.out.println("잘못입력하셨습니다..");
+
+                        } //break;
+                        continue;
+
+                    } catch (NumberFormatException e) {
+                        System.out.println("숫자만 입력하세요..");
+                    } catch (NullPointerException e) {
+                        System.out.println("숫자만 입력하세요..");
                     }
+
                     break;
                 case 1:
                 	MenuViewer.showCatchMenu(); //MenuViewer의 지역메뉴 showCatchMenu()호출
-                    if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
-                        //입력받은값(int)을 gm의 selectType으로 넘겨주고 getPoketmon()의 반환값이 true일 경우
-                        choice = 2; //2번메뉴 실행(가방 전체출력)
-                    }else{
-                        System.out.println("             메인메뉴로 돌아갑니다.."); // false일 경우
-                        choice = 0; //0번메뉴 실행(초기메뉴)
+                    try{
+                        if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
+                            //입력받은값(int)을 gm의 selectType으로 넘겨주고 getPoketmon()의 반환값이 true일 경우
+                            // choice = 2; //2번메뉴 실행(가방 전체출력)
+                        }else{
+                            System.out.println("             메인메뉴로 돌아갑니다.."); // false일 경우
+                            choice = 0; //0번메뉴 실행(초기메뉴)
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("숫자만 입력하세요...");
+                    } catch (NullPointerException e) {
+                        System.out.println("숫자만 입력하세요.....");
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("없는 선택지 입니다...");
                     }
                     break;
                 case 2:
@@ -39,15 +80,16 @@ public class PlayGameMain {
                         gm.deletePoketmon(Integer.parseInt(GameConst.sc.nextLine()));
                 		System.out.println("             오박사에게 보냈습니다..     ");
                 		System.out.println();
-                    }catch (NumberFormatException e){ //숫자가 아닐경우
-                        System.out.println("             숫자만 입력하세요..");
-                    }catch (IndexOutOfBoundsException e){
-                        System.out.println("             빈 가방입니다.." + (GameConst.poketmonBag.size())); //가방이 비었을 경우
+                    } catch (NumberFormatException e) { // 숫자가 아닐경우
+                        System.out.println("숫자만 입력하세요..");
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("빈 가방입니다.." + (GameConst.poketmonBag.size())); // 가방이 비었을 경우
                     }
                     choice = 0; //초기메뉴로 이동
                     break;
                 case 4:
-                	if(GameConst.poketmonBag.size() < 3) {
+
+                    if(GameConst.poketmonBag.size() < 3) {
                 		System.out.println("             입장하실 수 없습니다..    　");
                 		System.out.println();
                 		choice = 0;
@@ -78,6 +120,8 @@ public class PlayGameMain {
                 	break;
                 case 5:
                     System.out.println("            게임을 종료합니다..");
+                    gm.savePoketmons();
+                    gm.saveToFile();
                     return; //프로그램 종료
             }
         }

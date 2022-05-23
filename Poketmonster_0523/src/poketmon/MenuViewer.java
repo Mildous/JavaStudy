@@ -2,10 +2,17 @@ package poketmon;
 
 public class MenuViewer {
 
-
+	static void loginMenu() {
+		System.out.println("         ==========================　");
+		System.out.println("             Hello PoketWorld !    　");
+		System.out.println("         ==========================　");
+		System.out.println("               1. 회원가입 　          ");
+		System.out.println("               2. 로그인              ");
+		System.out.println("               3. 종료              　");
+	}
     static void showMainMenu() { //메인메뉴 출력
     	System.out.println("         ==========================　");
-		System.out.println("               POKETMONSTER     　   ");
+		System.out.println("               메뉴를 선택하세요        ");
 		System.out.println("         ==========================　");
 		System.out.println("               1. 포켓몬 잡기          ");
 		System.out.println("               2. 포켓몬 가방          ");
