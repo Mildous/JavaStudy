@@ -9,7 +9,7 @@ public class GameManager {
 	static boolean choice = true;
 	Scanner s = new Scanner(System.in);
     Map<String, String> userInfostorage = new HashMap<String, String>();
-    Map<String, List<Poketmon>> userPoketmons= new HashMap<String, List<Poketmon>>();
+    Map<String, List<Poketmon>> userPoketmons = new HashMap<String, List<Poketmon>>();
     File poketmonSaveFile = new File("C:\\Temp\\PoketmonSaveFile.txt");
     File loginSaveFile = new File("C:\\Temp\\LoginSaveFile.txt");
     static String id;
@@ -112,92 +112,125 @@ public class GameManager {
                     return false;
                 }
                 System.out.println("아이디가 없거나 비밀번호를 잘못입력하셨습니다.");
-                System.out.println("로그인 오류 " + (count + 1) + "회.");
-                count++;
-                continue;
+                return false;
             }
 
             System.out.println("로그인되었습니다.");
             return true;
         }
     }
-    void savePoketmons() {
+
+    void savePoketmonsToFile() {
         userPoketmons.put(id, GameConst.poketmonBag);
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
 
-    }
-
-    void saveToFile() {
-        FileOutputStream fos=null;
-        ObjectOutputStream oos=null;
-
-        if(!loginSaveFile.exists()) {
+        if (!poketmonSaveFile.exists()) {
             try {
-                loginSaveFile.createNewFile();
-                fos = new FileOutputStream(loginSaveFile);
-                oos = new ObjectOutputStream(fos);
+                poketmonSaveFile.createNewFile();
+            } catch (Exception e) {}
+        }
+        try {
+            fos = new FileOutputStream(poketmonSaveFile);
+            oos = new ObjectOutputStream(fos);
 
-                oos.writeObject(userInfostorage);
-                System.out.println("저장이 완료되었습니다.");
+            oos.writeObject(userPoketmons);
 
-            } catch (IOException e) {
-            }finally {
-                try {
-                    if(oos!=null) {
-                        oos.flush();
-                        oos.close();
-                    }
-                    if(fos!=null) {
-                        fos.close();
-                    }
-                }catch(Exception e) {
-                }
-            }
-        }else {
+        } catch (IOException e) {
+        } finally {
             try {
-                loginSaveFile.createNewFile();
-                fos = new FileOutputStream(loginSaveFile);
-                oos = new ObjectOutputStream(fos);
-
-                oos.writeObject(userInfostorage);
-                System.out.println("저장이 완료되었습니다.");
-
-            } catch (IOException e) {
-            }finally {
-                try {
-                    if(oos!=null) {
-                        oos.flush();
-                        oos.close();
-                    }
-                    if(fos!=null) {
-                        fos.close();
-                    }
-                }catch(Exception e) {
+                if (oos != null) {
+                    oos.flush();
+                    oos.close();
                 }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (Exception e) {
             }
         }
     }
 
-    void readFromFile() {
+    void readPoketmonsFromFile() {
         FileInputStream fis = null;
         ObjectInputStream ois = null;
-        if(!loginSaveFile.exists()) {
+        if (!poketmonSaveFile.exists()) {
+            return;
+        }
+        try {
+            fis = new FileInputStream(poketmonSaveFile);
+            ois = new ObjectInputStream(fis);
+
+            Map<String, List<Poketmon>> tmp = (Map<String, List<Poketmon>>) ois.readObject();
+            userPoketmons = tmp;
+            if(userPoketmons.get(id).size()!=0) {
+                GameConst.poketmonBag=userPoketmons.get(id);
+            }
+
+        } catch (Exception e) {
+        } finally {
+            try {
+                if (ois != null)
+                    ois.close();
+                if (fis != null)
+                    fis.close();
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    void saveUserToFile() {
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+
+        if (!loginSaveFile.exists()) {
+            try {
+                loginSaveFile.createNewFile();
+            } catch (Exception e) {}
+        }
+        try {
+            fos = new FileOutputStream(loginSaveFile);
+            oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(userInfostorage);
+
+        } catch (IOException e) {
+        } finally {
+            try {
+                if (oos != null) {
+                    oos.flush();
+                    oos.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    void readUserFromFile() {
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        if (!loginSaveFile.exists()) {
             return;
         }
         try {
             fis = new FileInputStream(loginSaveFile);
             ois = new ObjectInputStream(fis);
 
-            HashMap<String, String> tmp=(HashMap<String, String>)ois.readObject();
-            userInfostorage=tmp;
-//			Map<String, String> tmp2 = (Map<String, String>)ois.readObject();
-//			userInfostorage=tmp2;
+            HashMap<String, String> tmp = (HashMap<String, String>) ois.readObject();
+            userInfostorage = tmp;
 
-        }catch(Exception e) {
-        }finally {
+        } catch (Exception e) {
+        } finally {
             try {
-                if(ois!=null)ois.close();
-                if(fis!=null)fis.close();
-            }catch(Exception e) {}
+                if (ois != null)
+                    ois.close();
+                if (fis != null)
+                    fis.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

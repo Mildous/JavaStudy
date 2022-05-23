@@ -7,11 +7,10 @@ public class PlayGameMain {
     public static void main(String[] args) {
         GameManager gm = new GameManager();
         int choice = 0;
+        boolean loginResult = false;
         String num;
 
-        boolean loginResult = false;
-
-        gm.readFromFile();
+        gm.readUserFromFile();
         while (loginResult == false) {
             MenuViewer.loginMenu();
             choice = Integer.parseInt(GameConst.sc.nextLine());
@@ -25,11 +24,11 @@ public class PlayGameMain {
                     break;
                 case 3:
                     System.out.println("종료합니다");
-                    gm.saveToFile();
+                    gm.saveUserToFile();
                     System.exit(0);
             }
         }
-        
+        gm.readPoketmonsFromFile();
         while (loginResult == true) {
             switch (choice) {
                 case 0: //메인메뉴
@@ -56,7 +55,7 @@ public class PlayGameMain {
                     try{
                         if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
                             //입력받은값(int)을 gm의 selectType으로 넘겨주고 getPoketmon()의 반환값이 true일 경우
-                            // choice = 2; //2번메뉴 실행(가방 전체출력)
+                            choice = 2; //2번메뉴 실행(가방 전체출력)
                         }else{
                             System.out.println("             메인메뉴로 돌아갑니다.."); // false일 경우
                             choice = 0; //0번메뉴 실행(초기메뉴)
@@ -120,8 +119,8 @@ public class PlayGameMain {
                 	break;
                 case 5:
                     System.out.println("            게임을 종료합니다..");
-                    gm.savePoketmons();
-                    gm.saveToFile();
+                    gm.savePoketmonsToFile();
+                    gm.saveUserToFile();
                     return; //프로그램 종료
             }
         }
