@@ -10,8 +10,8 @@ public class GameManager {
 	Scanner s = new Scanner(System.in);
 	Map<String, String> userInfostorage = new HashMap<String, String>();
 	Map<String, List<Poketmon>> userPoketmons = new HashMap<String, List<Poketmon>>();
-	File poketmonSaveFile = new File("C:\\Temp\\PoketmonSaveFile.txt");
-	File loginSaveFile = new File("C:\\Temp\\LoginSaveFile.txt");
+	File poketmonSaveFile = new File("C:\\Temp\\PoketmonSaveFile.ser");
+	File loginSaveFile = new File("C:\\Temp\\LoginSaveFile.ser");
 	static String id;
 	static String password;
 
