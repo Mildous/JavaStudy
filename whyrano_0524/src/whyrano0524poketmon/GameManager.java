@@ -1,13 +1,11 @@
 package whyrano0524poketmon;
 
-import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class GameManager {
-	static boolean choice = true;
 	Scanner s = new Scanner(System.in);
+    boolean choice = true;
 
 
 	public void showBagInPokekmon(){ //가방에 담긴 포켓몬을 보여주는 메서드
@@ -26,7 +24,7 @@ public class GameManager {
 	
     
     public boolean getPoketmon(int selectType){ //서브메뉴 출력 후 입력한 값(int)을 받아옴
-        List<Poketmon> typePoketmons = new ArrayList(); //타입별 포켓몬을 담을 typePoketmon 리스트 생성
+        List<Poketmon> typePoketmons = new ArrayList<>(); //타입별 포켓몬을 담을 typePoketmon 리스트 생성
         for(int i = 0 ; i < GameConst.poketmons.size() ; i++){ //상수로 정해둔 총 포켓몬의 수 만큼 돌면서
             if(selectType == GameConst.poketmons.get(i).type){ //selectType(받아온 숫자)과 const에서 정해둔 타입이 일치하는것만
                 typePoketmons.add(GameConst.poketmons.get(i)); //typePoketmons에 담는다
@@ -41,7 +39,7 @@ public class GameManager {
         p.showGetMon(); //출현한 포켓몬을 Poketmon 클래스에서 지정해둔 양식에 맞춰 출력
         System.out.println("           잡으시겠습니까? [y/n]");
         s = new Scanner(System.in);
-        if(choice = "Y".equalsIgnoreCase(s.nextLine().trim()))
+        if(choice == "Y".equalsIgnoreCase(s.nextLine().trim()))
         	if((new Random().nextInt(100) < GameConst.LV_CP_MAPPING.get(p.level).get("p"))){ //p.level에 해당되는 p(상수로 정해둔 확률)가 랜덤으로 생성된 숫자보다 클 때 (p가 90이면 90%확률)
         		System.out.println("         ==========================　");
         		System.out.println("             "+p.name+"을(를) 잡았다!  ");
@@ -75,8 +73,7 @@ public class GameManager {
 	
 	//-----------------------------------------------------------------------------------------------------
     //로그인 기능
-   
+
 
 
 }
-

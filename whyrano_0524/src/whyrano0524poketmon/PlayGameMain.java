@@ -4,39 +4,21 @@ public class PlayGameMain {
 
     public static void main(String[] args) {
         GameManager gm = new GameManager(); //+
-        UserManager um = new UserManager(); //+
+        LoginManager lm = LoginManager.getLoginManager();
         BattleMewtwo mewtwo = new BattleMewtwo(); //+
-        
+
         int choice = 0;
         boolean loginResult = false;
-        String num;
-        
-        um.readUserFromFile(); //+
-		while (loginResult == false) {
-			MenuViewer.loginMenu();
-			choice = Integer.parseInt(GameConst.sc.nextLine());
-			switch (choice) {
-			case 1:
-				um.newLogIn();
-				break;
-			case 2:
-				loginResult = um.login(); //+
-				choice = 0;
-				break;
-			case 3:
-				System.out.println("종료합니다");
-				um.saveUserToFile(); //+
-				System.exit(0);
-            }
-        }
-        um.readPoketmonsFromFile(); //+
+
+        loginResult=lm.loginStep();
+        lm.readPoketmonsFromFile();
 
         while (loginResult) {
             switch (choice) {
                 case 0: 
                     MenuViewer.showMainMenu();
                     try {
-                        num = GameConst.sc.nextLine().trim();
+                        String num = GameConst.sc.nextLine().trim();
                         if (num.length() == 1) {
                             choice = Integer.parseInt(num);
                         } else {
@@ -119,8 +101,8 @@ public class PlayGameMain {
                 	break;
                 case 6:
                     System.out.println("            게임을 종료합니다..");
-    				um.savePoketmonsToFile(); //+
-    				um.saveUserToFile(); //+
+    				lm.savePoketmonsToFile(); //+
+    				lm.saveUserToFile(); //+
     				return; // 프로그램 종료
             }
         }
