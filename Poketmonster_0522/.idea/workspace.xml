@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51b99430-619d-433e-a537-c7350275f606" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../Poketmonster_0523/src/poketmon/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Poketmonster_0523/src/poketmon/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Poketmonster_0523/src/poketmon/PlayGameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Poketmonster_0523/src/poketmon/PlayGameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/admin/Coding/whyrano_0524"
   }
 }]]></component>
   <component name="RunManager">
@@ -58,10 +58,23 @@
       <option name="presentableId" value="Default" />
       <updated>1653316955132</updated>
       <workItem from="1653316965191" duration="3923000" />
+      <workItem from="1653321745775" duration="391000" />
+      <workItem from="1653390711313" duration="50000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

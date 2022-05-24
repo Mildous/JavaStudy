@@ -3,39 +3,41 @@ package whyrano0524poketmon;
 public class PlayGameMain {
 
     public static void main(String[] args) {
-        GameManager gm = new GameManager();
-        BattleMewtwo mewtwo = new BattleMewtwo();
+        GameManager gm = new GameManager(); //+
+        UserManager um = new UserManager(); //+
+        BattleMewtwo mewtwo = new BattleMewtwo(); //+
         
         int choice = 0;
         boolean loginResult = false;
         String num;
         
-        gm.readUserFromFile();
+        um.readUserFromFile(); //+
 		while (loginResult == false) {
 			MenuViewer.loginMenu();
 			choice = Integer.parseInt(GameConst.sc.nextLine());
 			switch (choice) {
 			case 1:
-				gm.newLogIn();
+				um.newLogIn();
 				break;
 			case 2:
-				loginResult = gm.login();
+				loginResult = um.login(); //+
 				choice = 0;
 				break;
 			case 3:
 				System.out.println("종료합니다");
-				gm.saveUserToFile();
+				um.saveUserToFile(); //+
 				System.exit(0);
             }
         }
-        gm.readPoketmonsFromFile();
-        while (loginResult == true) {
+        um.readPoketmonsFromFile(); //+
+
+        while (loginResult) {
             switch (choice) {
                 case 0: 
                     MenuViewer.showMainMenu();
                     try {
                         num = GameConst.sc.nextLine().trim();
-                        if (num.length() > 0 && num.length() < 2) {
+                        if (num.length() == 1) {
                             choice = Integer.parseInt(num);
                         } else {
                             System.out.println("잘못입력하셨습니다..");
@@ -44,8 +46,6 @@ public class PlayGameMain {
 
                     } catch (NumberFormatException e) {
                         System.out.println("숫자만 입력하세요..");
-                    } catch (NullPointerException e) {
-                        System.out.println("숫자만 입력하세요..");
                     }
 
                     break;
@@ -53,9 +53,9 @@ public class PlayGameMain {
                 	MenuViewer.showCatchMenu();
                     try{
                         if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
-                            choice = 2; 
+                            choice = 3;
                         }else{
-                            System.out.println("             메인메뉴로 돌아갑니다.."); 
+                            System.out.println("             메인메뉴로 돌아갑니다..");
                             choice = 0;
                         }
                     } catch (NumberFormatException e) {
@@ -67,10 +67,15 @@ public class PlayGameMain {
                     }
                     break;
                 case 2:
+                    MenuViewer.showPoketBook();
+                    GameConst.sc.nextLine();
+                    choice = 0;
+                    break;
+                case 3:
                     gm.showBagInPokekmon();
                     choice = 0; //초기메뉴로 이동
                     break;
-                case 3:
+                case 4:
                     MenuViewer.deleteMenu(); 
                     try {
                     	gm.showBagInPokekmon();
@@ -84,7 +89,7 @@ public class PlayGameMain {
                     }
                     choice = 0; 
                     break;
-                case 4:
+                case 5:
                 	if(GameConst.poketmonBag.size() < 3) {
                 		System.out.println("             입장하실 수 없습니다..    　");
                 		System.out.println();
@@ -112,10 +117,10 @@ public class PlayGameMain {
                 	System.out.println("             메인메뉴로 돌아갑니다.."); // false일 경우
                 	choice = 0;
                 	break;
-                case 5:
+                case 6:
                     System.out.println("            게임을 종료합니다..");
-    				gm.savePoketmonsToFile();
-    				gm.saveUserToFile();
+    				um.savePoketmonsToFile(); //+
+    				um.saveUserToFile(); //+
     				return; // 프로그램 종료
             }
         }
