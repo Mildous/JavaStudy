@@ -9,14 +9,17 @@ public class GameManager {
 
 
 	public void showBagInPokekmon(){ //가방에 담긴 포켓몬을 보여주는 메서드
-        for(int i = 0; i < GameConst.poketmonBag.size(); i++){ //arrayList의 크기만큼
+		if(GameConst.poketmonBag.isEmpty()){ //arrayList가 비어있을 경우
+            System.out.println("        │     빈 가방입니다..	│ ");
+            return;
+        }
+		for(int i = 0; i < GameConst.poketmonBag.size(); i++){ //arrayList의 크기만큼
             Poketmon p = GameConst.poketmonBag.get(i); //arrayList에 담긴 내용을
             System.out.println("        │ ["+(i+1)+"] "+"[" + p.name + "] [CP: " + p.cp +"]	│"); //출력한다
         }
-
-        /*if(GameConst.poketmonBag.isEmpty()){ //arrayList가 비어있을 경우
-            System.out.println("빈 가방입니다.."); //출력한다*/
-    }
+		
+	}
+        
 	
     
     public boolean getPoketmon(int selectType){ //서브메뉴 출력 후 입력한 값(int)을 받아옴
@@ -70,11 +73,8 @@ public class GameManager {
     
     public void selectVsMewtwo(int select) { // 뮤츠와 싸울 포켓몬을 입력받은 후 vsList에 추가 및 기존 가방에서 삭제
 		GameConst.vsList.add(GameConst.poketmonBag.get(select - 1));
-		GameConst.poketmonBag.remove(select - 1);
+		GameConst.poketmonBag.remove(select -1);
 	}
-	
-	//-----------------------------------------------------------------------------------------------------
-    //로그인 기능
 
 
 
