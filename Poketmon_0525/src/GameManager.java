@@ -71,4 +71,5 @@ public class GameManager {
         GameConst.poketmonBag.remove(select - 1);
     }
 
+
 }

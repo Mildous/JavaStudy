@@ -68,7 +68,7 @@ public class PlayGameMain {
                     } catch (NumberFormatException e) {
                         System.out.println("             숫자만 입력하세요..");
                     } catch (IndexOutOfBoundsException e) {
-                        System.out.println("             빈 가방입니다.." + (GameConst.poketmonBag.size()));
+                        System.out.println("             잘못입력하셨습니다.." + (GameConst.poketmonBag.size()));
                     }
                     choice = 0;
                     break;
@@ -121,7 +121,7 @@ public class PlayGameMain {
                 case 6:
                     System.out.println("            게임을 종료합니다..");
                     lm.savePoketmonsToFile(); //+
-                    lm.saveUserToFile(); //+
+
                     return; // 프로그램 종료
             }
         }
