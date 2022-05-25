@@ -26,6 +26,7 @@ public class LoginManager {
         lm.readUserFromFile();
         while (!loginResult) {
             MenuViewer.loginMenu();
+            try {
             choice = Integer.parseInt(GameConst.sc.nextLine());
             switch (choice) {
                 case 1:
@@ -39,6 +40,9 @@ public class LoginManager {
                     lm.saveUserToFile();
                     System.exit(0);
             }
+            }catch(Exception e) {
+            	System.out.println("잘못입력");
+            }
         }
         return loginResult;
     }
@@ -51,7 +55,7 @@ public class LoginManager {
 			if(choice.equalsIgnoreCase("y")) {
         	System.out.print("	ID를 입력하세요 → ");
         	id = GameConst.sc.nextLine().trim();// id 변수에 입력 아이디를 담음.
-        	if(id.indexOf(' ')==-1) {
+        	if(id.indexOf(' ')!=-1) {
         		System.out.println("	띄워쓰기는 사용하실 수 없습니다.");
         		return false;
         	}
@@ -83,7 +87,7 @@ public class LoginManager {
 				System.out.print("	ID를 입력하세요 → ");
 
 				id = GameConst.sc.nextLine().trim();
-				if(id.indexOf(' ')==-1) {
+				if(id.indexOf(' ')!=-1) {
 					System.out.println("	띄워쓰기는 사용하실 수 없습니다.");
 	        		return;
 				}
@@ -109,6 +113,7 @@ public class LoginManager {
 				}
 				userInfostorage.put(id, password);
 				System.out.println("	가입이 완료되었습니다.");
+				lm.saveUserToFile(); //+
 				System.out.println();
 				break;
 			}else if(choice.equalsIgnoreCase("n")) {
