@@ -1,7 +1,9 @@
+package poketmon;
+
 import java.util.stream.Collectors;
 
 public class BattleMewtwo {
-    final int MewtwoCP=1000;
+    final int MewtwoCP=300;
 
 
     public int getTotalCp() { // vsList에 담긴 포켓몬의 cp를 더한 총 합

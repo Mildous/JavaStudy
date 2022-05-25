@@ -1,3 +1,5 @@
+package poketmon;
+
 import java.io.Serializable;
 
 public class Poketmon implements Serializable{

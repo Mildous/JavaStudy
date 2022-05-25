@@ -1,3 +1,5 @@
+package poketmon;
+
 public class PlayGameMain {
 
     public static void main(String[] args) {
@@ -43,7 +45,7 @@ public class PlayGameMain {
                     } catch (NullPointerException e) {
                         System.out.println("              숫자만 입력하세요.....");
                     } catch (IndexOutOfBoundsException e) {
-                        System.out.println("            없는 선택지 입니다...");
+                        System.out.println("            없는 선택지입니다...");
                     }
                     break;
                 case 2:
@@ -58,6 +60,11 @@ public class PlayGameMain {
                     choice = 0; //초기메뉴로 이동
                     break;
                 case 4:
+                    if(GameConst.poketmonBag.size() == 0) {
+                        System.out.println("              빈 가방입니다..");
+                        choice = 0;
+                        break;
+                    }
                     MenuViewer.deleteMenu();
                     try {
                         gm.showBagInPokekmon();
@@ -68,7 +75,7 @@ public class PlayGameMain {
                     } catch (NumberFormatException e) {
                         System.out.println("             숫자만 입력하세요..");
                     } catch (IndexOutOfBoundsException e) {
-                        System.out.println("             잘못입력하셨습니다.." + (GameConst.poketmonBag.size()));
+                        System.out.println("             없는 선택지입니다..");
                     }
                     choice = 0;
                     break;
@@ -79,20 +86,25 @@ public class PlayGameMain {
                         choice = 0;
                         break;
                     }
-                    try {
-                        System.out.println("	  입장하시겠습니까? [Y/N]");
-                        System.out.print("	입력 → ");
-                        String select=GameConst.sc.nextLine().trim();
+                    System.out.println("	  입장하시겠습니까? [Y/N]");
+                    System.out.print("	입력 → ");
+                    String select=GameConst.sc.nextLine().trim();
 
-                        if("Y".equalsIgnoreCase(select)) {
-
+                    if("Y".equalsIgnoreCase(select)) {
 
 
+                        try {
                             for(int i=0; i<3; i++) {
                                 MenuViewer.vsMenu();
                                 gm.showBagInPokekmon(); //내용 출력
                                 MenuViewer.vsMenu2();
-                                gm.selectVsMewtwo(Integer.parseInt(GameConst.sc.nextLine())); //입력받은 값을 List에 담는다
+                                int poketmonChoice = Integer.parseInt(GameConst.sc.nextLine());
+                                if(poketmonChoice <= 0 || poketmonChoice > GameConst.poketmonBag.size()) {
+                                    System.out.println("              잘못입력하셨습니다..");
+                                    continue;
+                                }
+                                gm.selectVsMewtwo(poketmonChoice); //입력받은 값을 List에 담는다
+
                                 System.out.println();
                                 System.out.println("	  선택한 포켓몬은..");
                                 for(int j = 0 ; j < GameConst.vsList.size(); j++){ //고른 포켓몬 출력하기
@@ -106,15 +118,16 @@ public class PlayGameMain {
                             System.out.println("           [TOTAL CP] " + mewtwo.getTotalCp()); //CP합계 출력
                             System.out.println("           [뮤츠의　CP] "+mewtwo.MewtwoCP);
                             mewtwo.battleIf();
-
-                        }else{
-                            choice = 0;
-                            break;
+                            GameConst.vsList.clear();
+                        }catch(NumberFormatException e){
+                            System.out.println("              숫자만 입력하세요..");
                         }
-
-                    }catch (NumberFormatException e) {
-                        System.out.println("            숫자만 입력하세요..");
+                    }else{
+                        choice = 0;
+                        break;
                     }
+
+
                     System.out.println("            메인메뉴로 돌아갑니다.."); // false일 경우
                     choice = 0;
                     break;

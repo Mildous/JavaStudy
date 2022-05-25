@@ -1,16 +1,18 @@
+package poketmon;
+
 public class MenuViewer {
 
 
     static void showMainMenu() { //메인메뉴 출력
         System.out.println("        ┌───────────────────────┐");
-        System.out.println("        │     메뉴를 선택하세요..   │");
+        System.out.println("        │    메뉴를 선택하세요..    │");
         System.out.println("        ├───────────────────────┤");
-        System.out.println("        │      ① 포켓몬  잡기  	│");
-        System.out.println("        │      ② 포켓몬  도감  	│");
-        System.out.println("        │      ③ 포켓몬  가방  	│");
-        System.out.println("        │      ④ 가 방 정 리  	│");
-        System.out.println("        │      ⑤ 뮤츠와  대결  	│");
-        System.out.println("        │      ⑥ 게 임 종 료  	│");
+        System.out.println("        │     [1] 포켓몬 잡기   	│");
+        System.out.println("        │     [2] 포켓몬 도감   	│");
+        System.out.println("        │     [3] 포켓몬 가방   	│");
+        System.out.println("        │     [4] 가 방 정 리   	│");
+        System.out.println("        │     [5] 뮤츠와 대결   	│");
+        System.out.println("        │     [6] 게 임 종 료   	│");
         System.out.println("        └───────────────────────┘");
         System.out.print("	입력 → ");
 
@@ -20,11 +22,11 @@ public class MenuViewer {
         System.out.println("        ┌───────────────────────┐");
         System.out.println("        │    지역을 선택하세요..	│");
         System.out.println("        ├───────────────────────┤");
-        System.out.println("        │    ① 저~~　푸른 초원  	│");
-        System.out.println("        │    ② 뜨거운　사막지대  	│");
-        System.out.println("        │    ③ 제주도　푸른바다  	│");
-        System.out.println("        │    ④ 한국전력공사    	│");
-        System.out.println("        │    ⑤ 돌아가기       	│");
+        System.out.println("        │  [0] 이전메뉴로 돌아가기  	│");
+        System.out.println("        │  [1] 저~~　푸른 초원   	│");
+        System.out.println("        │  [2] 뜨거운　사막지대   	│");
+        System.out.println("        │  [3] 제주도 푸른 바다   	│");
+        System.out.println("        │  [4] 한국전력공사     	│");
         System.out.println("        └───────────────────────┘");
         System.out.print("	입력 → ");
     }
@@ -66,9 +68,9 @@ public class MenuViewer {
         System.out.println("        │      WELCOME  TO      │");
         System.out.println("        │    POKETMON WORLD !   │");
         System.out.println("        ├───────────────────────┤");
-        System.out.println("        │      ① 회 원 가 입  	│");
-        System.out.println("        │      ② 로  그  인   	│");
-        System.out.println("        │      ③ 게 임 종 료  	│");
+        System.out.println("        │     [1] 회 원 가 입   	│");
+        System.out.println("        │     [2] 로  그  인   	│");
+        System.out.println("        │     [3] 게 임 종 료   	│");
         System.out.println("        └───────────────────────┘");
         System.out.print("	입력 → ");
     }
@@ -90,25 +92,25 @@ public class MenuViewer {
         System.out.println("        │   풀 	│      저~ 푸른 초원   	│");
         System.out.println("        ├───────┴───────────────────────┤");
         System.out.println("        │  [Lv1] 뚜벅초	[CP]  10 ~ 100	│");
-        System.out.println("        │  [Lv2] 파라스	[CP] 210 ~ 500	│");
+        System.out.println("        │  [Lv2] 파라스	[CP]  80 ~ 200	│");
         System.out.println("        │  [Lv3] 이상해씨	[CP] 210 ~ 500	│");
         System.out.println("        ├───────┬───────────────────────┤");
         System.out.println("        │   불 	│      뜨거운 사막지대  	│");
         System.out.println("        ├───────┴───────────────────────┤");
         System.out.println("        │  [Lv1] 가디	[CP]  10 ~ 100	│");
-        System.out.println("        │  [Lv2] 식스테일	[CP] 210 ~ 500	│");
+        System.out.println("        │  [Lv2] 식스테일	[CP]  80 ~ 200	│");
         System.out.println("        │  [Lv3] 파이리	[CP] 210 ~ 500	│");
         System.out.println("        ├───────┬───────────────────────┤");
         System.out.println("        │   물 	│      제주도 푸른 바다   	│");
         System.out.println("        ├───────┴───────────────────────┤");
         System.out.println("        │  [Lv1] 고라파덕	[CP]  10 ~ 100	│");
-        System.out.println("        │  [Lv2] 발챙이	[CP] 210 ~ 500	│");
+        System.out.println("        │  [Lv2] 발챙이	[CP]  80 ~ 200	│");
         System.out.println("        │  [Lv3] 꼬부기	[CP] 210 ~ 500	│");
         System.out.println("        ├───────┬───────────────────────┤");
         System.out.println("        │  전기 	│      한국전력공사    	│");
         System.out.println("        ├───────┴───────────────────────┤");
         System.out.println("        │  [Lv1] 찌리리공	[CP]  10 ~ 100	│");
-        System.out.println("        │  [Lv2] 코일	[CP] 210 ~ 500	│");
+        System.out.println("        │  [Lv2] 코일	[CP]  80 ~ 200	│");
         System.out.println("        │  [Lv3] 이상해씨	[CP] 210 ~ 500	│");
         System.out.println("        └───────────────────────────────┘");
         System.out.println("         메뉴로 돌아가시려면 아무키나 누르세요..");
