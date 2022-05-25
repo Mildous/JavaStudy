@@ -11,9 +11,40 @@ import java.nio.file.Paths;
 public class Test {
 
 	public static void main(String[] args){
-	    	System.out.println("\u250C\u252C\u2510");
-	        System.out.println("\u251C\u253C\u2524");
-	        System.out.println("\u2514\u2534\u2518");
-	        System.out.println("😊😂🤣❤");
+
+        System.out.println("░░░░░░░░▀████▀▄▄░░░░░░░░░░░░░░▄█");
+        System.out.println("░░░░░░░░░░█▀░░░░▀▀▄▄▄▄▄░░░░▄▄▀▀█");
+        System.out.println("░░▄░░░░░░░░█░░░░░░░░░░▀▀▀▀▄░░▄▀");
+        System.out.println("░▄▀░▀▄░░░░░░▀▄░░░░░░░░░░░░░░▀▄▀");
+        System.out.println("▄▀░░░░█░░░░░█▀░░░▄█▀▄░░░░░░▄█");
+        System.out.println("▀▄░░░░░▀▄░░█░░░░░▀██▀░░░░░██▄█");
+        System.out.println("░▀▄░░░░▄▀░█░░░▄██▄░░░▄░░▄░░▀▀░█");
+        System.out.println("░░█░░▄▀░░█░░░░▀██▀░░░░▀▀░▀▀░░▄▀");
+        System.out.println("░█░░░█░░█░░░░░░▄▄░░░░░░░░░░░▄▀");
+        System.out.println("");
+        System.out.println("");
+        
+        try 
+		{
+        	System.out.println("   	      Ａ__Ａ  		 	");
+			System.out.println("   	 　　  (o・ω・)  	 	");
+			System.out.println(" 	  /ヽヘし▄︻▇〓┳═-・*。 	");
+			System.out.println(" 	   ＼/ヽｕ─ｕ'  		");
+			System.out.println();
+			Thread.sleep(500);
+			System.out.print("	    싸");
+			Thread.sleep(500);
+			System.out.print(" 우");
+			Thread.sleep(500);
+			System.out.print(" 는");
+			Thread.sleep(500);
+			System.out.print(" 중");
+			Thread.sleep(500);
+			System.out.print(" .");
+			Thread.sleep(500);
+			System.out.print(" .");
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {
+		}
 	        }
 	}

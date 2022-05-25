@@ -21,5 +21,40 @@ public class BattleMewtwo {
 			System.out.println();
 		}
 	}
+	public void showBattle() {
+		System.out.println();
+		try 
+		{
+			Thread.sleep(1000);
+			System.out.println("   	      Ａ__Ａ  		 	");
+			System.out.println("   	 　　  (o・ω・)  	 	");
+			System.out.println(" 	  /ヽヘし▄︻▇〓┳═-・*。 	");
+			System.out.println(" 	   ＼/ヽｕ─ｕ'  		");
+			System.out.println();
+			Thread.sleep(500);
+			System.out.print("	    싸");
+			Thread.sleep(500);
+			System.out.print(" 우");
+			Thread.sleep(500);
+			System.out.print(" 는");
+			Thread.sleep(500);
+			System.out.print(" 중");
+			Thread.sleep(500);
+			System.out.print(" .");
+			Thread.sleep(500);
+			System.out.print(" .");
+			Thread.sleep(2000);
+			System.out.println();
+			battleIf();
+			Thread.sleep(500);
+			System.out.println("            [TOTAL CP] " + getTotalCp()); //CP합계 출력
+			Thread.sleep(1000);
+			System.out.println("            [뮤츠의　CP] "+ MewtwoCP);
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {
+		}
+		System.out.println();
+		GameConst.vsList.clear();
+	}
 
 }

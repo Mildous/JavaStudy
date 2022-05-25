@@ -29,7 +29,6 @@ public class PlayGameMain {
                     } catch (NumberFormatException e) {
                         System.out.println("              숫자만 입력하세요..");
                     }
-
                     break;
                 case 1:
                 	MenuViewer.showCatchMenu();
@@ -86,13 +85,12 @@ public class PlayGameMain {
                 		choice = 0;
                 		break;
                 	}
-                		System.out.println("	  입장하시겠습니까? [Y/N]");
+                		System.out.println("	   입장하시겠습니까? [Y/N]");
                 		System.out.print("	입력 → ");
                 		String select=GameConst.sc.nextLine().trim();
                 			
                 			if("Y".equalsIgnoreCase(select)) {
-                				
-                				
+				
                 			try {	
                 				for(int i=0; i<3; i++) { 
                 					MenuViewer.vsMenu();
@@ -101,6 +99,7 @@ public class PlayGameMain {
                 					int poketmonChoice = Integer.parseInt(GameConst.sc.nextLine());
                 					if(poketmonChoice <= 0 || poketmonChoice > GameConst.poketmonBag.size()) {
                 						System.out.println("              잘못입력하셨습니다..");
+                						i--;
                 						continue;
                 					}
                 					gm.selectVsMewtwo(poketmonChoice); //입력받은 값을 List에 담는다
@@ -114,11 +113,7 @@ public class PlayGameMain {
                 					}
                 				}
 
-                				System.out.println();
-                				System.out.println("           [TOTAL CP] " + mewtwo.getTotalCp()); //CP합계 출력
-                				System.out.println("           [뮤츠의　CP] "+mewtwo.MewtwoCP);
-                				mewtwo.battleIf();
-                				GameConst.vsList.clear();
+                				mewtwo.showBattle();
                 			}catch(NumberFormatException e){
                 				System.out.println("              숫자만 입력하세요..");
                 			}
@@ -126,8 +121,7 @@ public class PlayGameMain {
                 				choice = 0;
                 				break;
                 			}
-                		
-                	
+         	
                 	System.out.println("            메인메뉴로 돌아갑니다.."); // false일 경우
                 	choice = 0;
                 	break;
