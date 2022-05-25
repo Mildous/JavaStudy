@@ -64,9 +64,15 @@ public class MenuViewer {
     }
     
     static void loginMenu() {
+        System.out.println("              _                            ");
+        System.out.println(" _ __   ___  | | _____ _ __ ___   ___  _ __  ");
+        System.out.println(" | '_ \\ / _ \\| |/ / _ \\ '_ ` _ \\ / _ \\| '_ \\ ");
+        System.out.println(" | |_) | (_) |   <  __/ | | | | | (_) | | | |");
+        System.out.println(" | .__/ \\___/|_|\\_\\___|_| |_| |_|\\___/|_| |_|");
+        System.out.println(" |_|                                         ");
+        System.out.println("");
 		System.out.println("        ┌───────────────────────┐");
-		System.out.println("        │      WELCOME  TO      │");
-		System.out.println("        │    POKETMON WORLD !   │");
+		System.out.println("        │     WELCOME WORLD !   │");
 		System.out.println("        ├───────────────────────┤");
 		System.out.println("        │     [1] 회 원 가 입   	│");
 		System.out.println("        │     [2] 로  그  인   	│");
