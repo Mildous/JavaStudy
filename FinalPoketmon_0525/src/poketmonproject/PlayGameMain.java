@@ -1,4 +1,4 @@
-package whyrano0524poketmon;
+package poketmonproject;
 
 public class PlayGameMain {
 
