@@ -40,7 +40,7 @@ public class GameManager {
 		
 
         p.showGetMon(); //출현한 포켓몬을 Poketmon 클래스에서 지정해둔 양식에 맞춰 출력
-        System.out.println("        │  잡으시겠습니까? [y/n]  	│");
+        System.out.println("        │  잡으시겠습니까? [Y/N]  	│");
 		System.out.println("        └───────────────────────┘");
 		System.out.print("	입력 → ");
         s = new Scanner(System.in); //Y/N 을 입력받을 scanner s 생성(sc 가져와도 되는데, 귀찮아서..)

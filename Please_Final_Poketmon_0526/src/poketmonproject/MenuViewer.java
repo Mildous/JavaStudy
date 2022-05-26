@@ -117,7 +117,7 @@ public class MenuViewer {
 		System.out.println("        ├───────┴───────────────────────┤");
 		System.out.println("        │  [Lv1] 찌리리공	[CP]  10 ~ 100	│");
 		System.out.println("        │  [Lv2] 코일 	[CP]  80 ~ 200	│");
-		System.out.println("        │  [Lv3] 이상해씨	[CP] 210 ~ 500	│");
+		System.out.println("        │  [Lv3] 피카츄	[CP] 210 ~ 500	│");
 		System.out.println("        └───────────────────────────────┘");
 		System.out.println("         메뉴로 돌아가시려면 아무키나 누르세요..");
 	}

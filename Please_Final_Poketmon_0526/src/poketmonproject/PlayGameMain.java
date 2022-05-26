@@ -121,6 +121,7 @@ public class PlayGameMain {
                 				lm.savePoketmonsToFile(); //저장
                 			}catch(NumberFormatException e){ //예외처리
                 				System.out.println("              숫자만 입력하세요..");
+                				GameConst.vsList.clear(); //vsList 초기화
                 			}
                 			}else{
                 				choice = 0;
