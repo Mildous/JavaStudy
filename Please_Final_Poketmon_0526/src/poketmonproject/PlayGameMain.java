@@ -14,7 +14,8 @@ public class PlayGameMain {
         lm.readPoketmonsFromFile(); //저장된 파일을 불러옴
 
         while (loginResult) { //로그인된 후 
-            switch (choice) {
+        
+        	switch (choice) {
                 case 0: 
                     MenuViewer.showMainMenu(); //메인메뉴 출력
                     try {
@@ -27,7 +28,7 @@ public class PlayGameMain {
                         continue;
 
                     } catch (NumberFormatException e) { //문자입력시 예외처리
-                        System.out.println("              숫자만 입력하세요..");
+                        System.out.println("             숫자만 입력하세요..");
                     }
                     break;
                     
@@ -133,7 +134,11 @@ public class PlayGameMain {
                     System.out.println("            게임을 종료합니다..");
     				lm.savePoketmonsToFile(); //저장
     				return; // 프로그램 종료
-            }
+    	        default:
+    	            System.out.println("            없는 선택지입니다...");
+    	            choice = 0;
+    	            break;
+            }		
         }
     }
 }
