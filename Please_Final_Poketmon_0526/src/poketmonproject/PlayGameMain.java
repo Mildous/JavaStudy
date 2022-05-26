@@ -3,20 +3,20 @@ package poketmonproject;
 public class PlayGameMain {
 
     public static void main(String[] args) {
-        GameManager gm = new GameManager(); //+
+        GameManager gm = new GameManager(); 
         LoginManager lm = LoginManager.getLoginManager();
-        BattleMewtwo mewtwo = new BattleMewtwo(); //+
+        BattleMewtwo mewtwo = new BattleMewtwo();
 
-        int choice = 0;
+        int choice = 0; //0번메뉴가 실행되도록 값 셋팅
         boolean loginResult = false;
 
-        loginResult=lm.loginStep();
-        lm.readPoketmonsFromFile();
+        loginResult=lm.loginStep(); //로그인메뉴
+        lm.readPoketmonsFromFile(); //저장된 파일을 불러옴
 
-        while (loginResult) {
+        while (loginResult) { //로그인된 후 
             switch (choice) {
                 case 0: 
-                    MenuViewer.showMainMenu();
+                    MenuViewer.showMainMenu(); //메인메뉴 출력
                     try {
                         String num = GameConst.sc.nextLine().trim();
                         if (num.length() == 1) {
@@ -26,22 +26,22 @@ public class PlayGameMain {
                         } 
                         continue;
 
-                    } catch (NumberFormatException e) {
+                    } catch (NumberFormatException e) { //문자입력시 예외처리
                         System.out.println("              숫자만 입력하세요..");
                     }
                     break;
                     
                 case 1:
-                	MenuViewer.showCatchMenu();
+                	MenuViewer.showCatchMenu(); //지역메뉴 출력
                     try{
                         if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
-                        	lm.savePoketmonsToFile(); //+
-                            choice = 3;      
+                        	lm.savePoketmonsToFile(); //잡은 포켓몬을 파일에 저장한 후
+                            choice = 3;      //가방으로 이동
                         }else{
                             System.out.println("           메인메뉴로 돌아갑니다..");
                             choice = 0;
                         }
-                    } catch (NumberFormatException e) {
+                    } catch (NumberFormatException e) { //예외처리
                         System.out.println("              숫자만 입력하세요...");
                     } catch (NullPointerException e) {
                         System.out.println("              숫자만 입력하세요.....");
@@ -51,32 +51,32 @@ public class PlayGameMain {
                     break;
                     
                 case 2:
-                    MenuViewer.showPoketBook();
-                    GameConst.sc.nextLine();
+                    MenuViewer.showPoketBook(); //도감 출력
+                    GameConst.sc.nextLine(); //입력받으면 메인메뉴로 이동
                     choice = 0;
                     break;
                     
                 case 3:
-                	MenuViewer.showPoketBag();
-                    gm.showBagInPokekmon();
-                    MenuViewer.showPoketBag2();
+                	MenuViewer.showPoketBag(); //꾸며주는 메서드
+                    gm.showBagInPokekmon(); //가방에 담긴 값 출력
+                    MenuViewer.showPoketBag2(); //꾸며주는 메서드2
                     choice = 0; //초기메뉴로 이동
                     break;
                     
                 case 4:
-                	if(GameConst.poketmonBag.size() == 0) {
+                	if(GameConst.poketmonBag.size() == 0) { //가방에 담긴 값이 없을때
                 		System.out.println("              빈 가방입니다..");
                 		choice = 0;
                 		break;
                 	}
-                    MenuViewer.deleteMenu(); 
+                    MenuViewer.deleteMenu(); //담긴값이 있을 경우
                     try {
                     	gm.showBagInPokekmon();
                         MenuViewer.deleteMenu2();
-                        gm.deletePoketmon(Integer.parseInt(GameConst.sc.nextLine()));
-                        lm.savePoketmonsToFile(); //+
+                        gm.deletePoketmon(Integer.parseInt(GameConst.sc.nextLine())); //번호 입력받고 삭제
+                        lm.savePoketmonsToFile(); //저장
                 		System.out.println();
-                    } catch (NumberFormatException e) {
+                    } catch (NumberFormatException e) { //예외처리
                         System.out.println("             숫자만 입력하세요..");
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("             없는 선택지입니다..");
@@ -85,7 +85,7 @@ public class PlayGameMain {
                     break;
                     
                 case 5:
-                	if(GameConst.poketmonBag.size() < 3) {
+                	if(GameConst.poketmonBag.size() < 3) { //가방에 3마리가 없을때
                 		System.out.println("            입장하실 수 없습니다..    　");
                 		System.out.println();
                 		choice = 0;
@@ -93,17 +93,17 @@ public class PlayGameMain {
                 	}
                 		System.out.println("	   입장하시겠습니까? [Y/N]");
                 		System.out.print("	입력 → ");
-                		String select=GameConst.sc.nextLine().trim();
+                		String select=GameConst.sc.nextLine().trim(); //y/n 입력받기
                 			
                 			if("Y".equalsIgnoreCase(select)) {
                 			try {	
-                				for(int i=0; i<3; i++) { 
+                				for(int i=0; i<3; i++) { //3마리가 될 때 동안
                 					MenuViewer.vsMenu();
-                					gm.showBagInPokekmon(); //내용 출력
+                					gm.showBagInPokekmon(); //가방 출력
                 					MenuViewer.vsMenu2();
-                					int poketmonChoice = Integer.parseInt(GameConst.sc.nextLine());
+                					int poketmonChoice = Integer.parseInt(GameConst.sc.nextLine()); //입력받기
                 					if(poketmonChoice <= 0 || poketmonChoice > GameConst.poketmonBag.size()) {
-                						System.out.println("              잘못입력하셨습니다..");
+                						System.out.println("              잘못입력하셨습니다.."); //없는 번호 입력시
                 						i--;
                 						continue;
                 					}
@@ -116,9 +116,9 @@ public class PlayGameMain {
                 						System.out.println("          ["+(j+1)+"]"+" ["+ p.name +"] [ CP "+p.cp+"]");
                 					}
                 				}
-                				mewtwo.showBattle();
-                				lm.savePoketmonsToFile(); //+
-                			}catch(NumberFormatException e){
+                				mewtwo.showBattle(); //배틀메뉴 출력
+                				lm.savePoketmonsToFile(); //저장
+                			}catch(NumberFormatException e){ //예외처리
                 				System.out.println("              숫자만 입력하세요..");
                 			}
                 			}else{
@@ -131,7 +131,7 @@ public class PlayGameMain {
                 	
                 case 6:
                     System.out.println("            게임을 종료합니다..");
-    				lm.savePoketmonsToFile(); //+
+    				lm.savePoketmonsToFile(); //저장
     				return; // 프로그램 종료
             }
         }

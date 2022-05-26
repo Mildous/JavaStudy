@@ -9,39 +9,39 @@ public class LoginManager {
     Map<String, String> userInfostorage = new HashMap<>(); //id,password 담을 맵.
     File loginSaveFile = new File("C:\\Temp\\LoginSaveFile.txt"); //save할 파일 선언
     private static LoginManager lm = new LoginManager(); // 로그인매니저를 싱글톤으로 만들려고함.
-    Map<String, List<Poketmon>> userPoketmons = new HashMap<>();
-    File poketmonSaveFile = new File("C:\\Temp\\PoketmonSaveFile.txt");
+    Map<String, List<Poketmon>> userPoketmons = new HashMap<>(); //PoketmonBag의 값들을 Map<List>로 저장
+    File poketmonSaveFile = new File("C:\\Temp\\PoketmonSaveFile.txt"); //지정해둔 경로에 파일을 생성
     private LoginManager() {}//싱글톤위해서 선언.
 
     public static String id;   //GameManager에서 포켓몬 가방을 불러올때 id를 써야하므로 광역으로 선언.
-    public String password; // password 닮을 변수.
+    public String password; // password 담을 변수.
 
     public static LoginManager getLoginManager() {
         return lm;//싱글톤
     }
 
     boolean loginStep() {
-        boolean loginResult = false;
-        int choice;
-        lm.readUserFromFile();
-        while (!loginResult) {
-            MenuViewer.loginMenu();
+        boolean loginResult = false; //로그인 결과를 t/f로 반환
+        int choice; //메뉴를 선택받을 choice
+        lm.readUserFromFile(); //저장된 UserFile을 불러옴
+        while (!loginResult) { //true일 경우
+            MenuViewer.loginMenu(); //로그인 메뉴 출력
             try {
-            choice = Integer.parseInt(GameConst.sc.nextLine());
+            choice = Integer.parseInt(GameConst.sc.nextLine()); //값을 입력받는다
             switch (choice) {
-                case 1:
-                    lm.newLogIn();
+                case 1: //1번을 입력받았을 때
+                    lm.newLogIn(); //회원가입 함수를 호출
                     break;
                 case 2:
-                    loginResult = lm.login();
+                    loginResult = lm.login(); //로그인함수 호출 후 t/f값 받아옴
                     break;
                 case 3:
-                    System.out.println("	종료합니다");
-                    lm.saveUserToFile();
+                    System.out.println("            게임을 종료합니다..");
+                    lm.saveUserToFile(); //저장 후 종료
                     System.exit(0);
             }
-            }catch(Exception e) {
-            	System.out.println("잘못입력");
+            }catch(Exception e) { //예외처리
+            	System.out.println("	잘못입력하셨습니다..");
             }
         }
         return loginResult;
@@ -51,11 +51,11 @@ public class LoginManager {
     	String choice;
         	System.out.println("	로그인을 진행하시겠습니까? [Y/N]");
         	System.out.print("	입력 → ");
-			choice = GameConst.sc.nextLine().trim(); //
+			choice = GameConst.sc.nextLine().trim();
 			if(choice.equalsIgnoreCase("y")) {
         	System.out.print("	ID를 입력하세요 → ");
         	id = GameConst.sc.nextLine().trim();// id 변수에 입력 아이디를 담음.
-        	if(id.indexOf(' ')!=-1) {
+        	if(id.indexOf(' ')!=-1) { //공백 입력시
         		System.out.println("	띄워쓰기는 사용하실 수 없습니다.");
         		return false;
         	}
@@ -161,9 +161,8 @@ public class LoginManager {
             userInfostorage = (HashMap<String, String>) ois.readObject(); // userInfostorage 에 읽어온 값을 넣음.
         } catch (Exception e) {
         }
-        //인풋스트림 닫기.
-        //인풋스트림 닫기.
     }
+    
     void savePoketmonsToFile() {
         userPoketmons.put(LoginManager.id, GameConst.poketmonBag);
         FileOutputStream fos = null;

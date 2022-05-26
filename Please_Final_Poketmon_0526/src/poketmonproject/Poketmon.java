@@ -14,7 +14,7 @@ public class Poketmon implements Serializable{
         this.level= level;
     }
 
-    public Poketmon(Poketmon p){ //new로 불러옴으로써 주소값이 겹치는것을 방지
+    public Poketmon(Poketmon p){ //new로 불러옴으로써 주소값이 겹치는것을 방지함
         this.name = p.name;
         this.type = p.type;
         this.level = p.level;

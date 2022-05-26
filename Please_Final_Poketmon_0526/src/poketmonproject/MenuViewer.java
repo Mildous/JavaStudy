@@ -58,7 +58,7 @@ public class MenuViewer {
 		System.out.println("        ├───────────────────────┤");
 		System.out.println("        │[0] 이전메뉴로 돌아가기  	│");
     }
-    static void deleteMenu2() { //삭제하기
+    static void deleteMenu2() { //삭제하기2
 		System.out.println("        └───────────────────────┘");
 		System.out.print("	입력 → ");
     }
