@@ -15,7 +15,7 @@ public class GameManager {
         }
 		for(int i = 0; i < GameConst.poketmonBag.size(); i++){ //arrayList의 크기만큼
             Poketmon p = GameConst.poketmonBag.get(i); //arrayList에 담긴 내용을
-            System.out.println("        │ ["+(i+1)+"] "+"[" + p.name + "] [CP: " + p.cp +"]	│"); //출력한다
+            System.out.println("        │["+(i+1)+"] "+"[" + p.name + "] [CP: " + p.cp +"]	│"); //출력한다
         }
 		
 	}
@@ -64,7 +64,7 @@ public class GameManager {
     	if(select == 0)
     		return;
         GameConst.poketmonBag.remove(select-1); //선택은 1부터 하기에 0이 아닌 -1로 설정
-		System.out.println("             오박사에게 보냈습니다..     ");
+		System.out.println("            오박사에게 보냈습니다..     ");
     }
 
     public int getRandomNumber(int min, int max) { //최소값과 최대값 사이에서 랜덤한 수를 생성하는 메서드

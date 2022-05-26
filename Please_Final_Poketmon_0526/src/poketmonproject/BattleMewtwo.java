@@ -3,15 +3,14 @@ package poketmonproject;
 import java.util.stream.Collectors;
 
 public class BattleMewtwo {
-	final int MewtwoCP=1000;
-
+	int MEWTWO_CP = (int)((Math.random() * (1200 - 300)) + 300);
 
 	public int getTotalCp() { // vsList에 담긴 포켓몬의 cp를 더한 총 합
 		return (int) GameConst.vsList.stream().collect(Collectors.summarizingInt(v -> v.cp)).getSum();
 	}
 	
 	public void battleIf() {
-		if(getTotalCp() > MewtwoCP) { //뮤츠 CP설정, 이겼을 경우
+		if(MEWTWO_CP < getTotalCp()) { //뮤츠 CP설정, 이겼을 경우
 			System.out.println();
 			System.out.println("                  < 승리 >");
 			System.out.println();
@@ -47,14 +46,15 @@ public class BattleMewtwo {
 			System.out.println();
 			battleIf();
 			Thread.sleep(500);
-			System.out.println("            [TOTAL CP] " + getTotalCp()); //CP합계 출력
+			System.out.println("            [뮤츠의　CP] "+ MEWTWO_CP);
 			Thread.sleep(1000);
-			System.out.println("            [뮤츠의　CP] "+ MewtwoCP);
+			System.out.println("            [TOTAL CP] " + getTotalCp()); //CP합계 출력
 			Thread.sleep(1000);
 		}catch(InterruptedException e) {
 		}
 		System.out.println();
 		GameConst.vsList.clear();
+		
 	}
 
 }

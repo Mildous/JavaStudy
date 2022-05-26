@@ -36,7 +36,7 @@ public class PlayGameMain {
                         if(gm.getPoketmon(Integer.parseInt(GameConst.sc.nextLine()))){
                             choice = 3;
                         }else{
-                            System.out.println("            메인메뉴로 돌아갑니다..");
+                            System.out.println("           메인메뉴로 돌아갑니다..");
                             choice = 0;
                         }
                     } catch (NumberFormatException e) {

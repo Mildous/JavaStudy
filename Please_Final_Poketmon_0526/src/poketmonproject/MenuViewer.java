@@ -56,7 +56,7 @@ public class MenuViewer {
 		System.out.println("        ┌───────────────────────┐");
 		System.out.println("        │    내보낼 포켓몬을 고르세요	│");
 		System.out.println("        ├───────────────────────┤");
-		System.out.println("        │ [0] 이전메뉴로 돌아가기  	│");
+		System.out.println("        │[0] 이전메뉴로 돌아가기  	│");
     }
     static void deleteMenu2() { //삭제하기
 		System.out.println("        └───────────────────────┘");
