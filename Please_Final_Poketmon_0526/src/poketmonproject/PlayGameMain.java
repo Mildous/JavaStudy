@@ -121,13 +121,14 @@ public class PlayGameMain {
                 				lm.savePoketmonsToFile(); //저장
                 			}catch(NumberFormatException e){ //예외처리
                 				System.out.println("              숫자만 입력하세요..");
-                				GameConst.vsList.clear(); //vsList 초기화
+                				GameConst.poketmonBag.addAll(GameConst.vsList);
                 			}
                 			}else{
                 				choice = 0;
                 				break;
                 			}
                 	System.out.println("            메인메뉴로 돌아갑니다.."); // false일 경우
+                	GameConst.vsList.clear(); //vsList 초기화
                 	choice = 0;
                 	break;
                 	
