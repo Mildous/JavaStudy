@@ -48,7 +48,7 @@ public class CartTest {
 
         System.out.println("do next product insert? [Y/N]");
         s = new Scanner(System.in);
-        shutdown = "Y".equalsIgnoreCase(s.nextLine()) ? true : false;
+        shutdown = "N".equalsIgnoreCase(s.nextLine()) ? true : false;
         if(!shutdown) {
             productList.remove(select);
             productOutput(cart, productList);
