@@ -81,7 +81,7 @@ public class PhoneBookManager {
 			System.out.print("수정할 생일 ==> ");
 			String birth = MenuViewer.sc.nextLine();
 			
-			infoStorage[index].birth = MenuViewer.sc.nextLine();
+			infoStorage[index].birth = birth;
 			System.out.println("수정완료");
 			
 		}else { //검색 실패시 메세지 출력
