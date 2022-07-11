@@ -3,6 +3,7 @@ package poketmon_mini_game;
 public class MenuViewer {
 
 
+<<<<<<< HEAD
     static void showMainMenu() { //¸ÞÀÎ¸Þ´º Ãâ·Â
         System.out.println("===== MENU =====");
         System.out.println("1. Æ÷ÄÏ¸ó Àâ±â");
@@ -23,6 +24,28 @@ public class MenuViewer {
 
     static void deleteMenu() { //»èÁ¦¸Þ´º Ãâ·Â
         System.out.println("³»º¸³¾ Æ÷ÄÏ¸óÀ» °í¸£¼¼¿ä");
+=======
+    static void showMainMenu() { //ë©”ì¸ë©”ë‰´ ì¶œë ¥
+        System.out.println("===== MENU =====");
+        System.out.println("1. í¬ì¼“ëª¬ ìž¡ê¸°");
+        System.out.println("2. í¬ì¼“ëª¬ ê°€ë°©");
+        System.out.println("3. ê°€ë°© ì •ë¦¬");
+        System.out.println("4. ê²Œìž„ ì¢…ë£Œ");
+        System.out.print("-> ");
+    }
+
+    static void showCatchMenu() { //ì„œë¸Œë©”ë‰´ ì¶œë ¥
+        System.out.println("===== MAP ======");
+        System.out.println("1. ì € í‘¸ë¥¸ ì´ˆì›");
+        System.out.println("2. ëœ¨ê±°ìš´ ì‚¬ë§‰ì§€ëŒ€");
+        System.out.println("3. ì œì£¼ë„ í‘¸ë¥¸ ë°”ë‹¤");
+        System.out.println("4. í•œêµ­ì „ë ¥ê³µì‚¬");
+        System.out.print("-> ");
+    }
+
+    static void deleteMenu() { //ì‚­ì œë©”ë‰´ ì¶œë ¥
+        System.out.println("ë‚´ë³´ë‚¼ í¬ì¼“ëª¬ì„ ê³ ë¥´ì„¸ìš”");
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
         
     }
 

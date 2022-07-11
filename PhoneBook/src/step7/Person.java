@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 package Step7;
 
 import java.util.Objects;
+=======
+package step7;
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 
 public class Person {
 	String name;
@@ -19,7 +23,10 @@ public class Person {
 	
 	Person(String name, String phoneNumber){
 		this(name, phoneNumber, null);
+<<<<<<< HEAD
 	
+=======
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 	}
 	void showPhoneInfo(){
 		//if(birth != null && birth.length() != 0)
@@ -29,6 +36,7 @@ public class Person {
 		else
 			System.out.printf("%s : %s%n", name, phoneNumber);
 	}
+<<<<<<< HEAD
 
 	@Override
 	public boolean equals(Object obj) {
@@ -47,4 +55,6 @@ public class Person {
 	}
 	
 	
+=======
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 }

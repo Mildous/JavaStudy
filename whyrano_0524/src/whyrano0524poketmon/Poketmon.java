@@ -21,7 +21,11 @@ public class Poketmon implements Serializable{
     }
 
     void showGetMon() { //출력 양식 메서드 - getPoketmon()에서 사용
+<<<<<<< HEAD
         System.out.println("[Lv."+level+" "+name+"] [CP: "+cp+"]");
+=======
+        System.out.println("        │ Lv."+level+" "+name+" [CP: "+cp+"]	│");
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
     }
 
 }

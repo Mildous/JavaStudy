@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package Step7;
+=======
+package step7;
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 
 import java.util.Scanner;
 
@@ -13,8 +17,12 @@ public class MenuViewer {
 		System.out.println("3. 데이터 수정");
 		System.out.println("4. 데이터 삭제");
 		System.out.println("5. 전체 출력");
+<<<<<<< HEAD
 		System.out.println("6. 전체 삭제");
 		System.out.println("7. 프로그램 종료");
+=======
+		System.out.println("6. 프로그램 종료");
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 		System.out.print("선택 ==> ");
 	}
 

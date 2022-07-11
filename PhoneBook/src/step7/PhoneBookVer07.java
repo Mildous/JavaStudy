@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package Step7;
+=======
+package step7;
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 
 public class PhoneBookVer07 {
 
@@ -31,9 +35,12 @@ public class PhoneBookVer07 {
 				case MainMenu.DISPLAY : 
 					pm.allDisplay();
 					break;
+<<<<<<< HEAD
 				case MainMenu.ALLDELETE :
 					pm.allDelete();
 					break;
+=======
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 				case MainMenu.EXIT :
 					System.out.println("프로그램 종료");
 					return;

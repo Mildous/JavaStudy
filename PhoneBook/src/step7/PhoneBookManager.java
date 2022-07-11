@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package Step7;
+=======
+package step7;
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -9,7 +13,11 @@ public class PhoneBookManager {
 	/* final int MAX_CNT=100;
 	Person[] infoStorage = new Person[MAX_CNT];
 	int curCnt = 0; */
+<<<<<<< HEAD
 	HashSet<Person> infoStorage = new HashSet<Person>(); // HashSet 추가
+=======
+	HashSet infoStorage = new HashSet(); // HashSet 추가
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 	
 	private PhoneBookManager() {}
 	
@@ -93,7 +101,11 @@ public class PhoneBookManager {
 		/* for(int i=0; i<curCnt; i++) {
 			infoStorage[i].showPhoneInfo();
 		} */
+<<<<<<< HEAD
 		Iterator<Person> it = infoStorage.iterator();
+=======
+		Iterator it = infoStorage.iterator();
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 		
 		while(it.hasNext()) {
 			Person tmp = (Person)it.next();
@@ -124,7 +136,11 @@ public class PhoneBookManager {
 	}
 	
 	private Person search(String name) { //int를 Person으로 변경
+<<<<<<< HEAD
 		Iterator<Person> it = infoStorage.iterator();
+=======
+		Iterator it = infoStorage.iterator();
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 		while(it.hasNext()) {
 			Person tmp = (Person)it.next();
 			if(name.equals(tmp.name))
@@ -167,12 +183,17 @@ public class PhoneBookManager {
 		System.out.print("삭제할 이름은? ==> ");
 		String name = MenuViewer.sc.nextLine();
 		Person tmp = null; //int index = -1;
+<<<<<<< HEAD
 		tmp = search(name);
 		if(tmp!=null) { //if(index>-1) {
 			infoStorage.remove(tmp);
 			System.out.println("삭제완료");
 		//index = search(name);
 		/* Iterator it = infoStorage.iterator(); //배열에서 정보 삭제
+=======
+		//index = search(name);
+		Iterator it = infoStorage.iterator(); //배열에서 정보 삭제
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 		while(it.hasNext()) {
 			tmp = (Person)it.next();
 			if(name.equals(tmp.name)) {
@@ -180,6 +201,7 @@ public class PhoneBookManager {
 				System.out.println("삭제완료");
 				return;
 			}
+<<<<<<< HEAD
 		} */
 		}else { //검색 실패시 메세지 출력
 		System.out.println("일치하는 정보가 없습니다.");
@@ -195,5 +217,21 @@ public class PhoneBookManager {
 		}
 		System.out.println("전체삭제 완료");
 	
+=======
+		}
+		System.out.println("일치하는 정보가 없습니다.");
+		/*
+		if(index > -1) {//삭제할 정보를 찾았으면
+			for(int i=index; i<curCnt; i++) {
+				infoStorage[i] = infoStorage[i+1];	
+			}
+			curCnt--;
+			System.out.println("삭제완료");
+			
+		}else {
+			System.out.println("일치하는 정보가 없습니다.");
+		}*/
+
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 	}
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package Step6;
+=======
+package step6;
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 
 public class PhoneBookManager {
 	
@@ -143,7 +147,11 @@ public class PhoneBookManager {
 			System.out.print("수정할 생일 ==> ");
 			String birth = MenuViewer.sc.nextLine();
 			
+<<<<<<< HEAD
 			infoStorage[index].birth = birth;
+=======
+			infoStorage[index].birth = MenuViewer.sc.nextLine();
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 			System.out.println("수정완료");
 			
 		}else { //검색 실패시 메세지 출력

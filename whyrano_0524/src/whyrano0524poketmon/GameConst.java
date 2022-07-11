@@ -31,6 +31,11 @@ public class GameConst { //상수
             3, Map.of("min", 210, "max", 500, "p", 30)
     ); //레벨이 1인 포켓몬의 최소값(min)은 10, 최대값(max)은 100, 확률(p)는 90
 
+<<<<<<< HEAD
     static List<Poketmon> poketmonBag = new ArrayList(); //잡은 포켓몬을 담을 ArrayList() 선언 및 생성
     static List<Poketmon> vsList = new ArrayList();
+=======
+    static List<Poketmon> poketmonBag = new ArrayList<>(); //잡은 포켓몬을 담을 ArrayList() 선언 및 생성
+    static List<Poketmon> vsList = new ArrayList<>();
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 }

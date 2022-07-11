@@ -29,7 +29,11 @@ public class PhoneBookVer04 {
 				pm.allDisplay();
 				break;
 			case 7:
+<<<<<<< HEAD
 				System.out.println("í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤");
+=======
+				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+>>>>>>> a85212dc5a82230bc1a3ea79005e75c30afd8eba
 				return;
 			}
 		}
